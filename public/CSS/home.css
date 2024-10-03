@@ -1,0 +1,94 @@
+/* Start Of Global Rules */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --main-color-1: white;
+    --main-color-2: #242424;
+    --main-transition:0.5s;
+}
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+a {
+    text-decoration: none;
+}
+@media screen and (max-width: 1024px) {
+    html {
+        font-size: 50%;
+    }
+}
+@media screen and (max-width: 767px) {
+    html {
+        font-size: 37.5%;
+    }
+}
+/* Start Of Footer Section */
+footer {
+    background-color: var(--main-color-2);
+    color: var(--main-color-1);
+    text-align: center;
+    padding: 5rem;
+}
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6rem;
+    padding: 5rem;
+}
+.footer-content a {
+    color: var(--main-color-1);
+    font-size: 2rem;
+}
+footer .footer-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding-bottom: 5rem;
+}
+footer .footer-icons i {
+    transition: var(--main-transition);
+    font-size: 3rem;
+    padding: 1.5rem;
+    border-radius: 50%;
+    border: 0.5rem solid var(--main-color-2);
+    cursor: pointer;
+    background-color: var(--main-color-1);
+}
+footer .footer-icons i:hover {
+    transform: translate(0, -1rem);
+}
+footer .footer-icons i:nth-child(1):hover {
+    background-color: red;
+}
+footer .footer-icons i:nth-child(2):hover {
+    background-color: #1da1f2;
+}
+footer .footer-icons i:nth-child(3):hover {
+    background-color: #0077b7;
+}
+footer .footer-icons i:nth-child(4):hover {
+    background-color: #010409;
+}
+footer .footer-icons i:nth-child(5):hover {
+    background-color: #f84a3d;
+}
+footer p {
+    font-size: 1.5rem;
+}
+footer p span {
+    color: crimson;
+}
+@media screen and (max-width: 767px) {
+    .footer-content {
+        justify-content: left;
+    }
+}
