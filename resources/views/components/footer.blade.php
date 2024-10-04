@@ -1,4 +1,7 @@
 <footer>
+    <div class="website-logo">
+        <img src="{{ asset('Imgs/Logo-1.png') }}" alt="website-logo">
+    </div>
     <div class="footer-content">
         <a href="#">Privacy Policy</a>
         <a href="#">Terms of Service</a>

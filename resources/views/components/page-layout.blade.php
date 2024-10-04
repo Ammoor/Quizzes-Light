@@ -9,7 +9,7 @@
     <title>{{ $title }}</title>
     {{ $styleSheet }}
     <link rel="stylesheet" href="{{ asset('CSS/all.min.css') }}" />
-    <link rel="shortcut icon" type="x-icon" href="{{ asset('Imgs/Green and Orange Owl Education Logo.png') }}" />
+    <link rel="shortcut icon" type="x-icon" href="{{ asset('Imgs/Logo-1.png') }}" />
 </head>
 
 <body>

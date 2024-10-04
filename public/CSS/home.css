@@ -7,7 +7,7 @@
 :root {
     --main-color-1: white;
     --main-color-2: #242424;
-    --main-transition:0.5s;
+    --main-transition: 0.5s;
 }
 html {
     font-size: 62.5%;
@@ -36,14 +36,14 @@ footer {
     text-align: center;
     padding: 5rem;
 }
-.footer-content {
+footer .footer-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 6rem;
     padding: 5rem;
 }
-.footer-content a {
+footer .footer-content a {
     color: var(--main-color-1);
     font-size: 2rem;
 }
@@ -59,9 +59,9 @@ footer .footer-icons i {
     font-size: 3rem;
     padding: 1.5rem;
     border-radius: 50%;
-    border: 0.5rem solid var(--main-color-2);
+    border: 0.5rem solid var(--main-color-1);
     cursor: pointer;
-    background-color: var(--main-color-1);
+    background-color: var(--main-color-2);
 }
 footer .footer-icons i:hover {
     transform: translate(0, -1rem);
@@ -90,5 +90,8 @@ footer p span {
 @media screen and (max-width: 767px) {
     .footer-content {
         justify-content: left;
+    }
+    footer .website-logo img {
+        width: 46.5%;
     }
 }
