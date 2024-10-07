@@ -13,6 +13,8 @@
 </head>
 
 <body>
+    <x-header></x-header>
+    <x-nav-bar></x-nav-bar>
     <main>
         {{ $pageContent }}
     </main>

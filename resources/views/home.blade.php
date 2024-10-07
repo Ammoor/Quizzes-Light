@@ -9,31 +9,6 @@
         <link rel="stylesheet" href="{{ asset('CSS/home.css') }}">
     </x-slot:styleSheet>
     <x-slot:pageContent>
-        @if (Route::has('login'))
-            <header>
-                <div class="website-logo">
-                    <h1><span><span>Quizzes</span> Light</span><span>Discover, Learn, and Conquer!</span></h1>
-                </div>
-                <div class="auth">
-                    <div class="links">
-                        @auth
-                            <a href="{{ url('/dashboard') }}">
-                                Dashboard
-                            </a>
-                        @else
-                            <a href="{{ route('login') }}">
-                                Log in
-                            </a>
-                            @if (Route::has('register'))
-                                <a href="{{ route('register') }}">
-                                    Register
-                                </a>
-                            @endif
-                        @endauth
-                    </div>
-                </div>
-            </header>
-        @endif
         <!-- Start Of Services Section -->
         <div class="services">
             <div class="container">
@@ -110,7 +85,7 @@
             </div>
         </div>
         <!-- Start Of Contact Section -->
-        <div class="contact">
+        <div class="contact" id="contact-section">
             <div class="container">
                 <div class="main-heading">
                     <h2>Contact Us</h2>

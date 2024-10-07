@@ -59,7 +59,7 @@ ul {
 /* Start Of Header Section */
 header {
     display: flex;
-    padding: 3rem 3rem 0;
+    padding: 3rem;
 }
 header .website-logo {
     width: 50%;
@@ -98,13 +98,32 @@ header .auth a {
 }
 header .auth a:first-child {
     margin-right: 0.5rem;
-    background-color: var(--main-color-3);
+    background-color: #454f59;
 }
 header .auth a:last-child {
-    background-color: var(--main-color-4);
+    background-color: var(--main-color-3);
 }
-header .auth a:last-child:hover {
+header .auth a:first-child:hover {
     background-color: #8f959b;
+}
+/* Start Of nav-bar Section */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    background-color: #2e3133;
+    padding: 0.5rem;
+}
+nav a {
+    color: var(--main-color-1);
+    transition: 0.3s;
+    font-size: 2rem;
+    padding: 1.5rem;
+}
+nav a:hover {
+    border-radius: 0.5rem;
+    color: #2e3133;
+    background-color: var(--main-color-1);
 }
 /* Start Of Services Section */
 .main-heading {
@@ -375,7 +394,14 @@ footer .footer-content {
 }
 footer .footer-content a {
     color: var(--main-color-1);
+    padding: 1.5rem;
     font-size: 2rem;
+    transition: 0.3s;
+}
+footer .footer-content a:hover {
+    background-color: var(--main-color-1);
+    color: var(--main-color-2);
+    border-radius: 0.5rem;
 }
 footer .footer-icons {
     display: flex;

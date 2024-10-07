@@ -6,7 +6,7 @@
         <a href="#">Privacy Policy</a>
         <a href="#">Terms of Service</a>
         <a href="#">About Us</a>
-        <a href="#">Contact Us</a>
+        <a href="{{ '#contact-section' }}">Contact Us</a>
         <a href="#">Careers</a>
         <a href="#">Support</a>
     </div>
