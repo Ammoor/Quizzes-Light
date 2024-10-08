@@ -15,6 +15,10 @@ Route::get('/guards', function () {
     return view("guards");
 });
 
+Route::get('/login-page', function () {
+    return view("auth.login-page");
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

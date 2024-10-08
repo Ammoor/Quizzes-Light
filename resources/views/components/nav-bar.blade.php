@@ -4,5 +4,5 @@
         border-radius: 0.5rem; @endif">Home</a>
     <a href="{{ '#Services' }}">Services</a>
     <a href="{{ '#About Us' }}">About Us</a>
-    <a href="{{ '#contact-section' }}">Contact Us</a>
+    <a href="{{ request()->is('home') ? '#contact-section' : 'home#contact-section' }}">Contact Us</a>
 </nav>
