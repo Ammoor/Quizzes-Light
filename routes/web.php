@@ -19,6 +19,10 @@ Route::get('/login-page', function () {
     return view("auth.login-page");
 });
 
+Route::get('/registration-page', function () {
+    return view("auth.registration-page");
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

@@ -110,9 +110,12 @@ header .auth a:first-child:hover {
 nav {
     display: flex;
     justify-content: center;
+    position: sticky;
+    top: -1px;
     gap: 2rem;
     background-color: #2e3133;
     padding: 0.5rem;
+    z-index: 10;
 }
 nav a {
     color: var(--main-color-1);
