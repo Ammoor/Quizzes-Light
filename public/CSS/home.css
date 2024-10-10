@@ -337,12 +337,17 @@ nav a:hover {
 .contact .content form input[type="submit"] {
     background-color: var(--main-color-3);
     color: var(--main-color-1);
+    transition: 0.3s;
     padding: 20px;
     border: none;
     display: flex;
     margin-left: auto;
+    font-weight: bold;
     text-transform: uppercase;
     cursor: pointer;
+}
+.contact .content form input[type="submit"]:hover {
+    background-color: #8f959b;
 }
 .contact .content .info {
     flex-basis: 25%;

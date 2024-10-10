@@ -10,7 +10,7 @@
                         Dashboard
                     </a>
                 @else
-                    <a href="{{ route('login') }}">
+                    <a href="login-page">
                         Log in
                     </a>
                     @if (Route::has('register'))
