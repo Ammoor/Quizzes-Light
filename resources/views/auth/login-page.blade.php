@@ -27,7 +27,7 @@
                         {{-- © CSS Scan, #30 by Saeed Alipoor --}}
                         <div class="checkbox-wrapper-30">
                             <span class="checkbox">
-                                <input id="checkbox" type="checkbox" required />
+                                <input id="checkbox" type="checkbox" />
                                 <svg>
                                     <use xlink:href="#checkbox-30" class="checkbox"></use>
                                 </svg>

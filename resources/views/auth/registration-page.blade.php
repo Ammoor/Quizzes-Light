@@ -18,17 +18,29 @@
                 <img src="{{ asset('Imgs/Logo-2.png') }}" alt="webiste-logo">
             </div>
             <div class="form">
-                <form action="" method="POST">
+                <form action="{{ route('register') }}" method="POST">
+                    @csrf
+                    {{-- First Name --}}
                     <label for="first-name">First Name <span>*</span></label>
                     <input id="first-name" type="text" name="first-name" required>
+                    <x-input-error :messages="$errors->get('first-name')" />
+                    {{-- Last Name --}}
                     <label for="last-name">Last Name <span>*</span></label>
                     <input id="last-name" type="text" name="last-name" required>
+                    <x-input-error :messages="$errors->get('last-name')" />
+                    {{-- E-mail --}}
                     <label for="email">E-mail <span>*</span></label>
                     <input id="email" type="email" name="email" required>
+                    <x-input-error :messages="$errors->get('email')" />
+                    {{-- Password --}}
                     <label for="password">Password <span>*</span></label>
                     <input id="password" type="password" name="password" required>
-                    <label for="confirm-password">Confirm Password <span>*</span></label>
-                    <input id="confirm-password" type="password" name="confirm-password" required>
+                    <x-input-error :messages="$errors->get('password')" />
+                    {{-- Confirm Password  --}}
+                    <label for="password_confirmation">Confirm Password <span>*</span></label>
+                    <input id="password_confirmation" type="password" name="password_confirmation" required>
+                    <x-input-error :messages="$errors->get('password_confirmation')" />
+                    {{-- Check Box --}}
                     <div class="checkbox-container">
                         {{-- © CSS Scan, #30 by Saeed Alipoor --}}
                         <div class="checkbox-wrapper-30">

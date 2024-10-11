@@ -10,7 +10,7 @@
     </x-slot:styleSheet>
     <x-slot:pageContent>
         <!-- Start Of Services Section -->
-        <div class="services">
+        <div class="services" id="services-section">
             <div class="container">
                 <div class="main-heading">
                     <h2>Services</h2>
