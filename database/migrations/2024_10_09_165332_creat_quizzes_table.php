@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('quiz', function (Blueprint $table) {
             $table->id();
             $table->string('name')->unique();
-            $table->foreignId('specialization_id')->constrained();
+            $table->foreignId('specialization_id')->constrained('specialization');
             $table->time('time');
             $table->json('question');
             $table->json('grades');
