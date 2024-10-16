@@ -13,12 +13,12 @@
 </head>
 
 <body>
-    <x-header></x-header>
+    <x-dashboard-header></x-dashboard-header>
     <x-nav-bar></x-nav-bar>
+    <x-side-nav-bar></x-side-nav-bar>
     <main>
         {{ $pageContent }}
     </main>
-    <x-footer></x-footer>
     {{ $javaScript }}
 </body>
 

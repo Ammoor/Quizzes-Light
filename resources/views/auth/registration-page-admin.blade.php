@@ -3,7 +3,7 @@
         <meta name="description" content="" />
     </x-slot:pageDescription>
     <x-slot:title>
-        Online testing registration
+        Online testing registration | Admin
     </x-slot:title>
     <x-slot:styleSheet>
         <link rel="stylesheet" href="{{ asset('CSS/registration-page.css') }}">
@@ -18,7 +18,7 @@
                 <img src="{{ asset('Imgs/Logo-2.png') }}" alt="webiste-logo">
             </div>
             <div class="form">
-                <form action="{{ route('register') }}" method="POST">
+                <form action="{{ route('registration-page-admin') }}" method="POST">
                     @csrf
                     {{-- First Name --}}
                     <label for="first-name">First Name <span>*</span></label>
@@ -66,4 +66,7 @@
             </div>
         </div>
     </x-slot:pageContent>
+    <x-slot:javaScript>
+        <script src=""></script>
+    </x-slot:javaScript>
 </x-page-layout>

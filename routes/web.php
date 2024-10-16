@@ -19,12 +19,24 @@ Route::get('/login-page', function () {
     return view("auth.login-page");
 });
 
-Route::get('/registration-page', function () {
-    return view("auth.registration-page");
+Route::get('/registration-page-student', function () {
+    return view("auth.registration-page-student");
 });
 
 Route::get('/about-us', function () {
     return view("about-us");
+});
+
+Route::middleware('auth')->group(function () {
+    Route::get('/student-dashboard-home', function () {
+        return view("student-dashboard-home");
+    })->name('student-dashboard-home');
+});
+
+Route::middleware('auth:administrator')->group(function () {
+    Route::get('/admin-dashboard-home', function () {
+        return view("admin-dashboard-home");
+    })->name('admin-dashboard-home');
 });
 
 Route::get('/dashboard', function () {

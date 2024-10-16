@@ -16,7 +16,7 @@
             </div>
             <div class="cards">
                 <div class="card-1">
-                    <a href="registration-page">
+                    <a href="registration-page-student">
                         <h3>Register as Student</h3>
                         <img src="{{ asset('Imgs/student.png') }}" alt="student image">
                     </a>
@@ -24,7 +24,7 @@
                         administrator.</p>
                 </div>
                 <div class="card-2">
-                    <a href="registration-page">
+                    <a href="registration-page-admin">
                         <h3>Register as Administrator</h3>
                         <img src="{{ asset('Imgs/teacher.png') }}" alt="teacher image">
                     </a>
@@ -34,4 +34,7 @@
             </div>
         </div>
     </x-slot:pageContent>
+    <x-slot:javaScript>
+        <script src=""></script>
+    </x-slot:javaScript>
 </x-page-layout>
