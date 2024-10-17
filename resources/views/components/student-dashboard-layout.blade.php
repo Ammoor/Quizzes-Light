@@ -13,9 +13,8 @@
 </head>
 
 <body>
-    <x-admin-dashboard-header></x-admin-dashboard-header>
+    <x-student-dashboard-header></x-student-dashboard-header>
     <x-nav-bar></x-nav-bar>
-    <x-side-nav-bar></x-side-nav-bar>
     <main>
         {{ $pageContent }}
     </main>

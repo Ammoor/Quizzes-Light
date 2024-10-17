@@ -15,12 +15,12 @@ Route::get('/guards', function () {
     return view("guards");
 });
 
-Route::get('/login-page', function () {
-    return view("auth.login-page");
+Route::get('/login-page-student', function () {
+    return view("auth.login-page-student");
 });
 
-Route::get('/registration-page-student', function () {
-    return view("auth.registration-page-student");
+Route::get('/login-page-admin', function () {
+    return view("auth.login-page-admin");
 });
 
 Route::get('/about-us', function () {
@@ -31,6 +31,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/student-dashboard-home', function () {
         return view("student-dashboard-home");
     })->name('student-dashboard-home');
+
+    Route::get('/student-profile', function () {
+        return view("student-profile");
+    });
 });
 
 Route::middleware('auth:administrator')->group(function () {

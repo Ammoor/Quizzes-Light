@@ -9,14 +9,14 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
 
-class AuthenticatedSessionController extends Controller
+class AuthenticatedSessionAdministratorController extends Controller
 {
     /**
      * Display the login view.
      */
     public function create(): View
     {
-        return view('auth.login-page-student');
+        return view('auth.login-page-admin');
     }
 
     /**
@@ -24,18 +24,18 @@ class AuthenticatedSessionController extends Controller
      */
     public function store(LoginRequest $request): RedirectResponse
     {
-        $request->authenticate();
+        $request->authenticateAdmin();
 
         $request->session()->regenerate();
 
-        return redirect()->intended(route('student-dashboard-home', absolute: false));
+        return redirect()->intended(route('admin-dashboard-home', absolute: false));
     }
     /**
      * Destroy an authenticated session.
      */
     public function destroy(Request $request): RedirectResponse
     {
-        Auth::guard('web')->logout();
+        Auth::guard('administrator')->logout();
 
         $request->session()->invalidate();
 

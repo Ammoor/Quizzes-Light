@@ -3,14 +3,14 @@
         <meta name="description" content="" />
     </x-slot:pageDescription>
     <x-slot:title>
-        Online testing registration | Student
+        Login into account | Admin
     </x-slot:title>
     <x-slot:styleSheet>
-        <link rel="stylesheet" href="{{ asset('CSS/registration-page.css') }}">
+        <link rel="stylesheet" href="{{ asset('CSS/login-page.css') }}">
     </x-slot:styleSheet>
     <x-slot:pageContent>
         <div class="main-header">
-            <h2>Register free for online testing</h2>
+            <h2>Welcome Back! Your Dashboard Awaits</h2>
             <p>Secure, Reliable, Professional.</p>
         </div>
         <div class="form-container">
@@ -18,16 +18,8 @@
                 <img src="{{ asset('Imgs/Logo-2.png') }}" alt="webiste-logo">
             </div>
             <div class="form">
-                <form action="{{ route('registration-page-student') }}" method="POST">
+                <form action="{{ route('login-admin') }}" method="POST">
                     @csrf
-                    {{-- First Name --}}
-                    <label for="first-name">First Name <span>*</span></label>
-                    <input id="first-name" type="text" name="first-name" required>
-                    <x-input-error :messages="$errors->get('first-name')" />
-                    {{-- Last Name --}}
-                    <label for="last-name">Last Name <span>*</span></label>
-                    <input id="last-name" type="text" name="last-name" required>
-                    <x-input-error :messages="$errors->get('last-name')" />
                     {{-- E-mail --}}
                     <label for="email">E-mail <span>*</span></label>
                     <input id="email" type="email" name="email" required>
@@ -36,16 +28,12 @@
                     <label for="password">Password <span>*</span></label>
                     <input id="password" type="password" name="password" required>
                     <x-input-error :messages="$errors->get('password')" />
-                    {{-- Confirm Password  --}}
-                    <label for="password_confirmation">Confirm Password <span>*</span></label>
-                    <input id="password_confirmation" type="password" name="password_confirmation" required>
-                    <x-input-error :messages="$errors->get('password_confirmation')" />
                     {{-- Check Box --}}
                     <div class="checkbox-container">
                         {{-- © CSS Scan, #30 by Saeed Alipoor --}}
                         <div class="checkbox-wrapper-30">
                             <span class="checkbox">
-                                <input id="checkbox" type="checkbox" required />
+                                <input id="checkbox" type="checkbox" />
                                 <svg>
                                     <use xlink:href="#checkbox-30" class="checkbox"></use>
                                 </svg>
@@ -58,10 +46,9 @@
                             </svg>
                         </div>
                         {{-- © CSS Scan, #30 by Saeed Alipoor --}}
-                        <label for="checkbox">I agree with the Quizzes Light.com <span>Terms</span> and <span>Privacy
-                                Policy</span>.</label>
+                        <label for="checkbox">Remember me</label>
                     </div>
-                    <input type="submit" value="Register ">
+                    <input type="submit" value="Log in ">
                 </form>
             </div>
         </div>

@@ -3,7 +3,7 @@
         <meta name="description" content="" />
     </x-slot:pageDescription>
     <x-slot:title>
-        Login into account
+        Login into account | Student
     </x-slot:title>
     <x-slot:styleSheet>
         <link rel="stylesheet" href="{{ asset('CSS/login-page.css') }}">

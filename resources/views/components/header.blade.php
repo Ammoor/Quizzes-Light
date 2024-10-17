@@ -33,7 +33,7 @@
                     <a href="{{ url('/admin-dashboard-home') }}">
                         Dashboard
                     </a>
-                    <form action="{{ 'logout' }}" method="POST">
+                    <form action="{{ 'logout-admin' }}" method="POST">
                         @csrf
                         <a href="logout" onclick="event.preventDefault();this.closest('form').submit();">
                             Log Out
@@ -50,7 +50,7 @@
                         </a>
                     </form>
                 @else
-                    <a href="login-page">
+                    <a href="login-page-student">
                         Log in
                     </a>
                     @if (Route::has('register'))

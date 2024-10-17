@@ -1,0 +1,235 @@
+/* Start Of Global Rules */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --main-color-1: white;
+    --main-color-2: #242424;
+    --main-color-3: #ff3131;
+    --main-color-4: #777;
+    --main-transition: 0.5s;
+    --section-padding: 10rem;
+}
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+main {
+    overflow: hidden;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+@media screen and (max-width: 1024px) {
+    html {
+        font-size: 50%;
+    }
+}
+@media screen and (max-width: 767px) {
+    html {
+        font-size: 37.5%;
+    }
+}
+/* Start Of Header Section */
+header {
+    display: flex;
+    padding: 3rem;
+}
+header .website-logo {
+    width: 50%;
+}
+header .website-logo h1 {
+    font-size: 4rem;
+}
+header .website-logo h1 > span:first-child,
+header .website-logo h1 > span:last-child {
+    display: block;
+}
+header .website-logo h1 > span:last-child {
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+header .website-logo h1 > span span {
+    color: var(--main-color-3);
+}
+header .auth {
+    position: relative;
+    width: 50%;
+}
+header .auth .drop-down {
+    position: absolute;
+    right: 0;
+}
+/* © FreeFrontend by Ivan Grozdic */
+.sec-center {
+    position: relative;
+    max-width: 100%;
+    text-align: center;
+    z-index: 200;
+}
+.sec-center .dropdown {
+    display: none;
+}
+.for-dropdown i {
+    margin-left: 1rem;
+}
+.dropdown:checked + label,
+.dropdown:not(:checked) + label {
+    position: relative;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 2;
+    height: 5rem;
+    transition: all 200ms linear;
+    border-radius: 0.4rem;
+    width: 22rem;
+    letter-spacing: 0.1rem;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    text-align: center;
+    border: none;
+    background-color: #ffeba7;
+    cursor: pointer;
+    color: #102770;
+    box-shadow: 0 1.2rem 3.5rem 0 rgba(255, 235, 167, 0.15);
+}
+.dropdown:checked + label:before {
+    pointer-events: auto;
+}
+.dropdown:not(:checked) + label i {
+    transition: transform 200ms linear;
+}
+.dropdown:checked + label i {
+    transform: rotate(180deg);
+    transition: transform 200ms linear;
+}
+.section-dropdown {
+    position: absolute;
+    padding: 0.5rem;
+    background-color: #111;
+    top: 7rem;
+    left: 0;
+    width: 100%;
+    border-radius: 0.4rem;
+    display: block;
+    box-shadow: 0 1.4rem 3.5rem 0 rgba(9, 9, 12, 0.4);
+    z-index: 2;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(2rem);
+    transition: all 200ms linear;
+}
+.dropdown:checked ~ .section-dropdown {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+.section-dropdown:before {
+    position: absolute;
+    top: -2rem;
+    left: 0;
+    width: 100%;
+    height: 2rem;
+    content: "";
+    display: block;
+    z-index: 1;
+}
+.section-dropdown:after {
+    position: absolute;
+    top: -0.7rem;
+    left: 3rem;
+    width: 0;
+    height: 0;
+    border-left: 0.8rem solid transparent;
+    border-right: 0.8rem solid transparent;
+    border-bottom: 0.8rem solid #111;
+    content: "";
+    display: block;
+    z-index: 2;
+    transition: all 200ms linear;
+}
+header a {
+    position: relative;
+    color: #fff;
+    transition: all 200ms linear;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    border-radius: 0.2rem;
+    padding: 0.5rem 0;
+    padding-left: 2rem;
+    padding-right: 1.5rem;
+    margin: 0.2rem 0;
+    text-align: left;
+    text-decoration: none;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    justify-content: space-between;
+    -ms-flex-pack: distribute;
+}
+header a:hover {
+    color: #102770;
+    background-color: #ffeba7;
+}
+/* © FreeFrontend by Ivan Grozdic */
+/* Start Of nav-bar Section */
+nav {
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: -0.1rem;
+    gap: 2rem;
+    background-color: #2e3133;
+    padding: 0.5rem;
+    z-index: 10;
+}
+nav a {
+    color: var(--main-color-1);
+    transition: 0.3s;
+    font-size: 2rem;
+    padding: 1.5rem;
+}
+nav a:hover {
+    border-radius: 0.5rem;
+    color: #2e3133;
+    background-color: var(--main-color-1);
+}
+/* Start of Page Content */
+.page-content h2 {
+    margin-top: 3rem;
+    font-size: 3rem;
+    text-align: center;
+}
+.page-content h2 span {
+    display: inline-block;
+    padding: 1rem;
+    transition: 0.3s;
+    border-radius: 0.5rem;
+}
+.page-content h2 span:hover {
+    color: #102770;
+    background-color: #ffeba7;
+}

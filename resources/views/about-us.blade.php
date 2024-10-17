@@ -77,24 +77,29 @@
                     </div>
                 </div>
             </div>
-            {{-- Mohamed  --}}
+            {{-- Mohammad  --}}
             <div class="card">
                 <div class="img">
-                    <img decoding="async" loading="lazy" src="{{ asset('Imgs/Seham.jpg') }}" alt="Nagwan img">
+                    <img decoding="async" loading="lazy" src="{{ asset('Imgs/Mohammad.jpeg') }}" alt="Mohammad img">
                 </div>
                 <div class="info">
                     <div class="personal-info">
-                        <h2>Nagwan Kassem Kamel</h2>
+                        <h2>Mohamed Abdel-Samie</h2>
                         <ul>
-                            <li>PHP Laravel Full-Stack Web Developer Intern @ DEPI</li>
-                            <li>Front-End react JS Intern @ ITI</li>
+                            <li>Software Engineer</li>
+                            <li>Full Stack Web Development</li>
+                            <li>Coding Instructor @ iSchool</li>
+                            <li>In-Person Trainer @ Udacity</li>
+                            <li>Technical Instructor</li>
+                            <li>ex. Vice President @ Pixels</li>
                         </ul>
                     </div>
                     <div class="links">
-                        <a href="https://www.linkedin.com/in/nagwan-kassem-740517258?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B%2FhpuReo3QQWhAtKRzR1EIA%3D%3D"
-                            target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="https://github.com/khnmoa" target="_blank"><i class="fa-brands fa-github"></i></a>
-                        <a href="mailto:nagwankassem9@gmail.com" target="_blank"><i
+                        <a href="https://www.linkedin.com/in/mo-abdel-samie/" target="_blank"><i
+                                class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://github.com/mo-abdel-samie" target="_blank"><i
+                                class="fa-brands fa-github"></i></a>
+                        <a href="mailto:mohamed.abdelsamie3009@gmail.com" target="_blank"><i
                                 class="fa-solid fa-envelope"></i></a>
                     </div>
                 </div>
@@ -125,21 +130,22 @@
             {{-- Mr. Sayed --}}
             <div class="card">
                 <div class="img">
-                    <img decoding="async" loading="lazy" src="{{ asset('Imgs/Seham.jpg') }}" alt="Nagwan img">
+                    <img decoding="async" loading="lazy" src="{{ asset('Imgs/Mr. Sayed.jpeg') }}" alt="Mr. Sayed img">
                 </div>
                 <div class="info">
                     <div class="personal-info">
-                        <h2>Nagwan Kassem Kamel</h2>
+                        <h2>Mr. Sayed Safwet Sayed</h2>
                         <ul>
-                            <li>PHP Laravel Full-Stack Web Developer Intern @ DEPI</li>
-                            <li>Front-End react JS Intern @ ITI</li>
+                            <li>Senior Full-Stack Engineer @ _VOIS</li>
+                            <li>PHP Laravel Full-Stack @ DEPI</li>
                         </ul>
                     </div>
                     <div class="links">
-                        <a href="https://www.linkedin.com/in/nagwan-kassem-740517258?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B%2FhpuReo3QQWhAtKRzR1EIA%3D%3D"
-                            target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="https://github.com/khnmoa" target="_blank"><i class="fa-brands fa-github"></i></a>
-                        <a href="mailto:nagwankassem9@gmail.com" target="_blank"><i
+                        <a href="https://www.linkedin.com/in/sayed-safwet-3a5372199/" target="_blank"><i
+                                class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://github.com/sayedazzam15" target="_blank"><i
+                                class="fa-brands fa-github"></i></a>
+                        <a href="mailto:sayedsafwet4@gmail.com" target="_blank"><i
                                 class="fa-solid fa-envelope"></i></a>
                     </div>
                 </div>
