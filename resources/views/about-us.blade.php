@@ -35,7 +35,7 @@
             {{-- Nagwan --}}
             <div class="card">
                 <div class="img">
-                    <img decoding="async" loading="lazy" src="{{ asset('Imgs/Seham.jpg') }}" alt="Nagwan img">
+                    <img decoding="async" loading="lazy" src="{{ asset('Imgs/Nagwan.jpg') }}" alt="Nagwan img">
                 </div>
                 <div class="info">
                     <div class="personal-info">
@@ -58,21 +58,21 @@
             {{-- Kero --}}
             <div class="card">
                 <div class="img">
-                    <img decoding="async" loading="lazy" src="{{ asset('Imgs/Seham.jpg') }}" alt="Nagwan img">
+                    <img decoding="async" loading="lazy" src="{{ asset('Imgs/Kero.jpeg') }}" alt="Kero img">
                 </div>
                 <div class="info">
                     <div class="personal-info">
-                        <h2>Nagwan Kassem Kamel</h2>
+                        <h2>Kerolos Medhat Saad</h2>
                         <ul>
+                            <li>Senior student at October 6 University</li>
                             <li>PHP Laravel Full-Stack Web Developer Intern @ DEPI</li>
-                            <li>Front-End react JS Intern @ ITI</li>
                         </ul>
                     </div>
                     <div class="links">
-                        <a href="https://www.linkedin.com/in/nagwan-kassem-740517258?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B%2FhpuReo3QQWhAtKRzR1EIA%3D%3D"
-                            target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="https://github.com/khnmoa" target="_blank"><i class="fa-brands fa-github"></i></a>
-                        <a href="mailto:nagwankassem9@gmail.com" target="_blank"><i
+                        <a href="https://www.linkedin.com/in/kerolos-medhat-15b502252/" target="_blank"><i
+                                class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://github.com/Kerotn" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="mailto:kerolosmedhatsaad212102373@gmail.com" target="_blank"><i
                                 class="fa-solid fa-envelope"></i></a>
                     </div>
                 </div>
@@ -137,7 +137,7 @@
                         <h2>Mr. Sayed Safwet Sayed</h2>
                         <ul>
                             <li>Senior Full-Stack Engineer @ _VOIS</li>
-                            <li>PHP Laravel Full-Stack @ DEPI</li>
+                            <li>Our technical instructor & supervisor @ DEPI</li>
                         </ul>
                     </div>
                     <div class="links">

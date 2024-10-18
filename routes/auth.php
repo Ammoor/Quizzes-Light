@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Middleware\RedirectIfAuthenticated;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Auth\AuthenticatedSessionAdministratorController;
 use App\Http\Controllers\Auth\ConfirmablePasswordController;
@@ -14,7 +15,7 @@ use App\Http\Controllers\Auth\RegisteredStudentController;
 use App\Http\Controllers\Auth\VerifyEmailController;
 use Illuminate\Support\Facades\Route;
 
-Route::middleware('guest')->group(function () {
+Route::middleware(RedirectIfAuthenticated::class)->group(function () {
     Route::get('register', [RegisteredUserController::class, 'create'])
         ->name('register');
 
@@ -78,5 +79,5 @@ Route::middleware('auth')->group(function () {
 
 Route::middleware('auth:administrator')->group(function () {
     Route::post('logout-admin', [AuthenticatedSessionAdministratorController::class, 'destroy'])
-    ->name('logout-admin');
+        ->name('logout-admin');
 });
