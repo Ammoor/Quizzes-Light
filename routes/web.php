@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Middleware\RedirectIfAuthenticated;
+use App\Http\Controllers\FetchFromDataBase;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -12,10 +13,6 @@ Route::get('/home', function () {
     return view("home");
 });
 
-Route::get('/guards', function () {
-    return view("guards");
-});
-
 Route::middleware(RedirectIfAuthenticated::class)->group(function () {
     Route::get('/login-page-student', function () {
         return view("auth.login-page-student");
@@ -23,6 +20,10 @@ Route::middleware(RedirectIfAuthenticated::class)->group(function () {
 
     Route::get('/login-page-admin', function () {
         return view("auth.login-page-admin");
+    });
+
+    Route::get('/guards', function () {
+        return view("guards");
     });
 });
 
@@ -52,6 +53,8 @@ Route::middleware('auth:administrator')->group(function () {
     Route::get('/admin-profile', function () {
         return view("admin-profile");
     })->name('admin-profile');
+
+    Route::get('/generate-quiz', [FetchFromDataBase::class, 'specializationData']);
 });
 
 Route::get('/dashboard', function () {

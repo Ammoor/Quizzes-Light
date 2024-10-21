@@ -169,6 +169,8 @@ nav a:hover {
 .form-container .form form .checkbox-container label {
     font-size: 1.5rem;
     margin: 0;
+    display: inline-flex;
+    align-items: center;
 }
 .form-container .form form .checkbox-container label span {
     cursor: pointer;
