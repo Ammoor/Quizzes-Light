@@ -12,6 +12,15 @@
     --main-transition: 0.5s;
     --section-padding: 10rem;
 }
+::-webkit-scrollbar {
+    width: 1.5vw;
+}
+::-webkit-scrollbar-track {
+    background-color: #2e3133;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-color-3);
+}
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
@@ -240,7 +249,7 @@ main h2 {
     color: #2e3133;
     background-color: var(--main-color-1);
     border-radius: 0.5rem;
-    white-space:wrap;
+    white-space: wrap;
 }
 .details-section .info:hover {
     color: var(--main-color-1);
