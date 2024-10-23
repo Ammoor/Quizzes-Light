@@ -285,6 +285,50 @@ nav a:hover {
         width: 50%;
     }
 }
+/* Start of Scroll Up Button */
+.scroll-up-button {
+    display: none;
+    position: fixed;
+    right: 3rem;
+    bottom: 3rem;
+    z-index: 1000;
+}
+.scroll-up-button button {
+    color: var(--main-color-1);
+    background-color: #2e3133;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 3rem;
+    padding: 2rem;
+    transition: 0.3s;
+}
+.scroll-up-button button i {
+    transition: var(--main-transition);
+}
+.scroll-up-button button:hover {
+    background-color: var(--main-color-3);
+}
+.scroll-up-button button:hover i {
+    color: #2e3133;
+    transform: translate(0, -50%);
+}
+@keyframes move-button-left {
+    from {
+        transform: translateX(200%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+@keyframes move-button-right {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(200%);
+    }
+}
 /* Start Of Footer Section */
 footer {
     background-color: var(--main-color-2);

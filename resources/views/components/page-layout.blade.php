@@ -18,6 +18,9 @@
     <main>
         {{ $pageContent }}
     </main>
+    <div class="scroll-up-button">
+        <button><i class="fa-solid fa-arrow-up"></i></button>
+    </div>
     <x-footer></x-footer>
     {{ $javaScript }}
 </body>

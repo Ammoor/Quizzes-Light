@@ -153,24 +153,6 @@
         </div>
     </x-slot:pageContent>
     <x-slot:javaScript>
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const elements = document.querySelectorAll('.about-us .card');
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.style.animation = 'move-to-right 1.5s forwards';
-                        } else {
-                            entry.target.style.animation = 'none';
-                            entry.target.offsetHeight;
-                            entry.target.style.animation = 'move-to-left 1.5s forwards';
-                        }
-                    });
-                });
-                elements.forEach(element => {
-                    observer.observe(element);
-                });
-            });
-        </script>
+        <script src="{{ asset('JavaScript/about-us.js') }}"></script>
     </x-slot:javaScript>
 </x-page-layout>
