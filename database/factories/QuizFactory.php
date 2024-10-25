@@ -16,20 +16,32 @@ class QuizFactory extends Factory
      */
     public function definition(): array
     {
-        return [
-            'name' => 'Quiz' . $this->faker->unique()->numberBetween(1, 100),
-            'specializations_id' => $this->faker->numberBetween(1, 7), // 7 specializations
-            'time' => $this->faker->numberBetween(5, 20), // Duration in minutes
-            'question' => json_encode([
-                'id' => $this->faker->unique()->numberBetween(1, 100),
+        $questions = [];
+        $answers = [];
+        $grades = [];
+        for ($i = 1; $i <= 10; $i++) { // Create 10 questions per quiz.
+            $questions[] = [
+                'id' => $i,
                 'question_text' => $this->faker->sentence,
-            ]),
-            'grades' => json_encode([
-                'id' => $this->faker->unique()->numberBetween(1, 100),
+            ];
+            $answers[] = [
+                'question_id' => $i,
+                'answer_text' => $this->faker->sentence,
+            ];
+            $grades[] = [
+                'id' => $i,
                 'quiz_id' => $this->faker->numberBetween(1, 100),
                 'student_id' => $this->faker->numberBetween(1, 100),
-                'grade' => $this->faker->numberBetween(1, 100),
-            ]),
+                'grade' => $this->faker->numberBetween(0, 20),
+            ];
+        }
+        return [
+            'name' => 'Quiz ' . $this->faker->unique()->numberBetween(50, 100),
+            'specialization_id' => $this->faker->numberBetween(1, 7), // 7 specializations
+            'time' => $this->faker->numberBetween(5, 20), // Duration in minutes
+            'questions' => json_encode([$questions]),
+            'answers' => json_encode([$answers]),
+            'grades' => json_encode([$grades]),
             'created_at' => now(),
             'updated_at' => now(),
         ];

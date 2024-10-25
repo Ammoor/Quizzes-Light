@@ -21,6 +21,7 @@
                         <ul>
                             <li>Junior student at October 6 University</li>
                             <li>PHP Laravel Full-Stack Web Developer Intern @ DEPI</li>
+                            <li>Front-End Developer @ <span><span>Quizzes</span> Light</span></li>
                         </ul>
                     </div>
                     <div class="links">
@@ -44,6 +45,7 @@
                             <li>Senior student at October 6 University</li>
                             <li>PHP Laravel Full-Stack Web Developer Intern @ DEPI</li>
                             <li>Front-End react JS Intern @ ITI</li>
+                            <li>Front-End Developer @ <span><span>Quizzes</span> Light</span></li>
                         </ul>
                     </div>
                     <div class="links">
@@ -66,6 +68,7 @@
                         <ul>
                             <li>Senior student at October 6 University</li>
                             <li>PHP Laravel Full-Stack Web Developer Intern @ DEPI</li>
+                            <li>Front-End Developer @ <span><span>Quizzes</span> Light</span></li>
                         </ul>
                     </div>
                     <div class="links">
@@ -87,11 +90,12 @@
                         <h2>Mohamed Abdel-Samie</h2>
                         <ul>
                             <li>Software Engineer</li>
-                            <li>Full Stack Web Development</li>
+                            <li>Full-Stack Web Developer</li>
                             <li>Coding Instructor @ iSchool</li>
                             <li>In-Person Trainer @ Udacity</li>
                             <li>Technical Instructor</li>
                             <li>ex. Vice President @ Pixels</li>
+                            <li>Back-End Developer @ <span><span>Quizzes</span> Light</span></li>
                         </ul>
                     </div>
                     <div class="links">
@@ -116,6 +120,8 @@
                             <li>Junior student at FCSAI @ Fayoum University</li>
                             <li>PHP Laravel Full-Stack Web Developer Intern @ DEPI</li>
                             <li>Aspire Leaders Program Intern @ Aspire Institute</li>
+                            <li>Full-Stack Developer @ <span><span>Quizzes</span> Light</span></li>
+                            <li><span><span>Quizzes</span> Light</span> Team Leader</li>
                         </ul>
                     </div>
                     <div class="links">

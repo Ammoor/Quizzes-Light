@@ -225,12 +225,12 @@ nav a:hover {
 }
 /* Start Of Side-Bar  */
 .sidebar {
-    width: 20rem;
     background-color: #f8f9fa;
     border-right: 0.1rem solid #ddd;
+    width: 20rem;
+    height: 100vh;
     padding: 1.5rem;
     position: fixed;
-    height: 100vh;
     left: 0;
     transition: transform 0.3s ease;
 }
@@ -430,12 +430,23 @@ h2 {
     font-size: 1.5rem;
     padding: 2rem 3rem;
 }
+.quiz-panel-buttons button:hover {
+    background-color: var(--main-color-3);
+}
+.quiz-panel-buttons button.submit {
+    background-color: green;
+}
+.quiz-panel-buttons button.not-allowed {
+    cursor: not-allowed;
+    background-color: #8f959b;
+    opacity: 0.5;
+}
+.quiz-panel-buttons button:where(.not-allowed, .submit):hover {
+    background-color: #8f959b;
+}
 .quiz-panel-buttons .btn-2 {
     position: absolute;
     right: 2rem;
-}
-.quiz-panel-buttons button:hover {
-    background-color: var(--main-color-3);
 }
 @media screen and (max-width: 767px) {
     main {

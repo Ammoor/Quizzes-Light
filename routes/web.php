@@ -2,6 +2,7 @@
 
 use App\Http\Middleware\RedirectIfAuthenticated;
 use App\Http\Controllers\FetchFromDataBase;
+use App\Http\Controllers\CreateQuizController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -55,6 +56,8 @@ Route::middleware('auth:administrator')->group(function () {
     })->name('admin-profile');
 
     Route::get('/generate-quiz', [FetchFromDataBase::class, 'specializationData']);
+
+    Route::post('generate-quiz', [CreateQuizController::class, 'store'])->name('generate-quiz');
 });
 
 Route::get('/dashboard', function () {

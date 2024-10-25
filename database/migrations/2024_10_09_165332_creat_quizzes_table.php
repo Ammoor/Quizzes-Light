@@ -14,9 +14,10 @@ return new class extends Migration
         Schema::create('quizzes', function (Blueprint $table) {
             $table->id();
             $table->string('name')->unique();
-            $table->foreignId('specializations_id')->constrained('specializations');
-            $table->time('time');
-            $table->json('question');
+            $table->foreignId('specialization_id')->constrained('specializations');
+            $table->integer('time');
+            $table->json('questions');
+            $table->json('answers');
             $table->json('grades');
             $table->timestamps();
         });

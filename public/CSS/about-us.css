@@ -162,6 +162,12 @@ nav a:hover {
 .about-us .card .info .personal-info ul li {
     padding: 0.5rem;
 }
+.about-us .card .info .personal-info ul li span {
+    font-weight: bold;
+}
+.about-us .card .info .personal-info ul li span span {
+    color: var(--main-color-3);
+}
 .about-us .card .info .personal-info :where(h2, li) {
     transition: 0.3s;
 }
