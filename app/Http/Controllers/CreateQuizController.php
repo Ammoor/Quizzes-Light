@@ -15,6 +15,7 @@ class CreateQuizController extends Controller
             'specialization' => 'required',
             'questions-number' => 'required',
             'quiz-time' => 'required',
+            'time-slot' => 'required'
         ]);
 
         $specializationID = Specialization::where('name', $request->input('specialization'))->first()->id;
@@ -28,7 +29,7 @@ class CreateQuizController extends Controller
             ];
             $answers[] = [
                 'question_id' => $i,
-                'answer_text' => Faker::create()->sentence,
+                'answer_text' => 'The right answer',
             ];
         }
 

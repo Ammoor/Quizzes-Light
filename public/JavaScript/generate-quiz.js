@@ -27,26 +27,44 @@ function toggleSidebar() {
     let currentCard = 0;
     const cards = document.querySelectorAll(".card");
     let currentCardNumber = document.querySelector(".crnt-card-num");
+    let button1 = document.querySelector(".btn-1 button");
+    let button2 = document.querySelector(".btn-2 button");
     function showCard(index) {
         cards.forEach((card, i) => {
             card.classList.toggle("active", i === index);
         });
     }
+    function submitForm() {
+        button2.setAttribute("type", "submit");
+    }
     function nextCard() {
         if (currentCard < cards.length - 1) {
-            currentCardNumber.innerHTML = currentCard + 2 + "/" + cards.length;
+            button1.classList.remove("not-allowed");
             currentCard++;
+            currentCardNumber.innerHTML =
+                currentCard + 1 + " / " + cards.length;
+            if (currentCard == cards.length - 1) {
+                button2.classList.add("submit");
+                button2.innerHTML = 'Create <i class="fa-solid fa-check"></i>';
+                button2.addEventListener("click", submitForm);
+            }
             showCard(currentCard);
         }
     }
     function prevCard() {
         if (currentCard > 0) {
-            currentCardNumber.innerHTML = currentCard + "/" + cards.length;
+            button2.removeEventListener("click", submitForm);
+            button2.classList.remove("submit");
+            button2.innerHTML = 'Next <i class="fa-solid fa-arrow-right"></i>';
+            currentCardNumber.innerHTML = currentCard + " / " + cards.length;
             currentCard--;
+            if (currentCard == 0) {
+                button1.classList.add("not-allowed");
+            }
             showCard(currentCard);
         }
     }
     // Initialize the first card
-    currentCardNumber.innerHTML = currentCard + 1 + "/" + cards.length;
+    currentCardNumber.innerHTML = currentCard + 1 + " / " + cards.length;
     showCard(currentCard);
 }

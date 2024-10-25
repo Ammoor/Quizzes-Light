@@ -32,9 +32,9 @@
                     <div class="choices">
                         @for ($i = 1, $count = 5; $i <= 4; $i++, $count += 5)
                             <div class="choice">
-                                <input type="radio" id="{{ 'option' . '-' . $i }}" name="questions-number"
+                                <input type="radio" id="{{ 'option-' . $i }}" name="questions-number"
                                     value="{{ $count }}">
-                                <label for="{{ 'option' . '-' . $i }}">{{ $count }}</label>
+                                <label for="{{ 'option-' . $i }}">{{ $count }} questions</label>
                             </div>
                         @endfor
                     </div>
@@ -45,9 +45,9 @@
                     <div class="choices">
                         @for ($i = 1, $count = 5; $i <= 4; $i++, $count += 5)
                             <div class="choice">
-                                <input type="radio" id="{{ 'time' . '-' . $i }}" name="quiz-time"
+                                <input type="radio" id="{{ 'time-' . $i }}" name="quiz-time"
                                     value="{{ $count }}">
-                                <label for="{{ 'time' . '-' . $i }}">{{ $count }} min</label>
+                                <label for="{{ 'time-' . $i }}">{{ $count }} min</label>
                             </div>
                         @endfor
                     </div>
@@ -55,8 +55,17 @@
                 {{-- Date Card --}}
                 <div class="card">
                     <h3>When would you like the quiz to start?</h3>
-                    <div class="date">
-                        <input type="datetime-local">
+                    <div class="choices">
+                        @php
+                            $timeSlots = [5, 10, 30, 60]; // Time in minutes.
+                        @endphp
+                        @for ($i = 0; $i < sizeof($timeSlots); $i++)
+                            <div class="choice">
+                                <input type="radio" id="{{ 'slot-' . $i + 1 }}" name="time-slot"
+                                    value="{{ $timeSlots[$i] }}">
+                                <label for="{{ 'slot-' . $i + 1 }}">After {{ $timeSlots[$i] }} min</label>
+                            </div>
+                        @endfor
                     </div>
                 </div>
             </div>

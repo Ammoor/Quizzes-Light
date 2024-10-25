@@ -225,13 +225,12 @@ nav a:hover {
 }
 /* Start Of Side-Bar  */
 .sidebar {
-    width: 20rem;
     background-color: #f8f9fa;
     border-right: 0.1rem solid #ddd;
-    padding: 1.5rem;
-    position: fixed;
+    width: 20rem;
     height: 100vh;
-    left: 0;
+    padding: 1.5rem;
+    position: absolute;
     transition: transform 0.3s ease;
 }
 .Dashboard {

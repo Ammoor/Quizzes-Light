@@ -26,7 +26,7 @@ class QuizFactory extends Factory
             ];
             $answers[] = [
                 'question_id' => $i,
-                'answer_text' => $this->faker->sentence,
+                'answer_text' => 'The right answer',
             ];
             $grades[] = [
                 'id' => $i,

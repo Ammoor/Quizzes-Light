@@ -230,8 +230,7 @@ nav a:hover {
     width: 20rem;
     height: 100vh;
     padding: 1.5rem;
-    position: fixed;
-    left: 0;
+    position: absolute;
     transition: transform 0.3s ease;
 }
 .Dashboard {
