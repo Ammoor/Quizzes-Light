@@ -9,7 +9,7 @@ class FetchFromDataBase extends Controller
 {
     public function specializationData()
     {
-        $data = Specialization::all();
-        return view('generate-quiz', compact('data'));
+        $specializationData = Specialization::all();
+        return view('generate-quiz', compact('specializationData'));
     }
 }

@@ -9,7 +9,7 @@
     <title>{{ $title }}</title>
     {{ $styleSheet }}
     <link rel="stylesheet" href="{{ asset('CSS/all.min.css') }}" />
-    <link rel="shortcut icon" type="x-icon" href="{{ asset('Imgs/favicon.png') }}" />
+    <link rel="shortcut icon" type="x-icon" href="{{ asset('Imgs/Fav-icon.png') }}" />
 </head>
 
 <body>
@@ -19,6 +19,9 @@
     <main>
         {{ $pageContent }}
     </main>
+    <div class="scroll-up-button">
+        <button><i class="fa-solid fa-arrow-up"></i></button>
+    </div>
     {{ $javaScript }}
 </body>
 

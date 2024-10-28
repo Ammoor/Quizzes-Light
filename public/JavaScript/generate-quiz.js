@@ -34,11 +34,29 @@ function toggleSidebar() {
             card.classList.toggle("active", i === index);
         });
     }
+    function validateCurrentCard() {
+        const currentInputs = cards[currentCard].querySelectorAll(
+            'input[type="radio"]:checked'
+        );
+        return currentInputs.length > 0;
+    }
     function submitForm() {
+        if (!validateCurrentCard()) {
+            alert(
+                "Please make sure you select one option before proceeding to the next question."
+            );
+            return;
+        }
         button2.setAttribute("type", "submit");
     }
     function nextCard() {
         if (currentCard < cards.length - 1) {
+            if (!validateCurrentCard()) {
+                alert(
+                    "Please make sure you select one option before proceeding to the next question."
+                );
+                return;
+            }
             button1.classList.remove("not-allowed");
             currentCard++;
             currentCardNumber.innerHTML =
@@ -68,3 +86,24 @@ function toggleSidebar() {
     currentCardNumber.innerHTML = currentCard + 1 + " / " + cards.length;
     showCard(currentCard);
 }
+const scrollUpButton = document.querySelector(".scroll-up-button button");
+window.addEventListener("scroll", function () {
+    if (window.scrollY >= 500) {
+        scrollUpButton.parentElement.style.animation =
+            "move-button-left 1s forwards";
+        setTimeout(() => {
+            scrollUpButton.parentElement.style.display = "block";
+        }, 500);
+    } else {
+        scrollUpButton.parentElement.style.animation =
+            "move-button-right 1s forwards";
+        setTimeout(() => {
+            scrollUpButton.parentElement.style.display = "none";
+        }, 500);
+    }
+});
+scrollUpButton.addEventListener("click", function () {
+    window.scrollTo({
+        top: 0,
+    });
+});

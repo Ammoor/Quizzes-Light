@@ -260,4 +260,6 @@ main h2 {
 }
 .details-section .info p {
     font-weight: 400;
+    display: inline-flex;
+    align-items: end;
 }

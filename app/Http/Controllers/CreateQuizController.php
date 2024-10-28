@@ -33,7 +33,7 @@ class CreateQuizController extends Controller
             ];
         }
 
-        $quiz = Quiz::create([
+        $quizData = Quiz::create([
             'name' => 'Quiz ' . Quiz::count() + 1,
             'specialization_id' => $specializationID,
             'time' => $request->input('quiz-time'),
@@ -41,5 +41,11 @@ class CreateQuizController extends Controller
             'answers' => json_encode([$answers]),
             'grades' => json_encode([]),
         ]);
+
+        $quizData['specialization_name'] = $request->specialization;
+
+        session(['quizData' => $quizData]);
+
+        return redirect(route('quiz-generated'));
     }
 }

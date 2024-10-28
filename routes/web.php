@@ -3,6 +3,8 @@
 use App\Http\Middleware\RedirectIfAuthenticated;
 use App\Http\Controllers\FetchFromDataBase;
 use App\Http\Controllers\CreateQuizController;
+use App\Http\Controllers\DeleteQuizController;
+use App\Http\Controllers\UpdateQuizController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -58,6 +60,14 @@ Route::middleware('auth:administrator')->group(function () {
     Route::get('/generate-quiz', [FetchFromDataBase::class, 'specializationData']);
 
     Route::post('generate-quiz', [CreateQuizController::class, 'store'])->name('generate-quiz');
+
+    Route::get('/quiz-generated', function () {
+        return view('quiz-generated');
+    })->name('quiz-generated');
+
+    Route::post('delete-quiz', [DeleteQuizController::class, 'delete'])->name('delete-quiz');
+
+    Route::post('update-quiz', [UpdateQuizController::class, 'update'])->name('update-quiz');
 });
 
 Route::get('/dashboard', function () {

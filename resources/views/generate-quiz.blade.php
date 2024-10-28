@@ -15,9 +15,9 @@
             <div class="quiz-panel">
                 {{-- Specialization Card --}}
                 <div class="card active">
-                    <h3>What is the main specialization of this quiz?</h3>
+                    <h3>What is the main specialization of this quiz? <span>*</span></h3>
                     <div class="choices">
-                        @foreach ($data as $item)
+                        @foreach ($specializationData as $item)
                             <div class="choice">
                                 <input type="radio" id="{{ $item->name }}" name="specialization"
                                     value="{{ $item->name }}">
@@ -28,7 +28,7 @@
                 </div>
                 {{-- Number Of Questions Card --}}
                 <div class="card">
-                    <h3>How many questions would you like to include in the quiz?</h3>
+                    <h3>How many questions would you like to include in the quiz? <span>*</span></h3>
                     <div class="choices">
                         @for ($i = 1, $count = 5; $i <= 4; $i++, $count += 5)
                             <div class="choice">
@@ -41,7 +41,7 @@
                 </div>
                 {{-- Time Card --}}
                 <div class="card">
-                    <h3>How much time do you want to allocate for the quiz?</h3>
+                    <h3>How much time do you want to allocate for the quiz? <span>*</span></h3>
                     <div class="choices">
                         @for ($i = 1, $count = 5; $i <= 4; $i++, $count += 5)
                             <div class="choice">
@@ -52,9 +52,9 @@
                         @endfor
                     </div>
                 </div>
-                {{-- Date Card --}}
+                {{-- Time Slot Card --}}
                 <div class="card">
-                    <h3>When would you like the quiz to start?</h3>
+                    <h3>When would you like the quiz to start? <span>*</span></h3>
                     <div class="choices">
                         @php
                             $timeSlots = [5, 10, 30, 60]; // Time in minutes.
