@@ -3,6 +3,7 @@
 use App\Http\Middleware\RedirectIfAuthenticated;
 use App\Http\Controllers\FetchFromDataBase;
 use App\Http\Controllers\CreateQuizController;
+use App\Http\Controllers\ViewGeneratedQuizController;
 use App\Http\Controllers\DeleteQuizController;
 use App\Http\Controllers\UpdateQuizController;
 use App\Http\Controllers\ProfileController;
@@ -61,9 +62,7 @@ Route::middleware('auth:administrator')->group(function () {
 
     Route::post('generate-quiz', [CreateQuizController::class, 'store'])->name('generate-quiz');
 
-    Route::get('/quiz-generated', function () {
-        return view('quiz-generated');
-    })->name('quiz-generated');
+    Route::get('/quiz-generated/{quizID}/{quizTimeSlot}', [ViewGeneratedQuizController::class, 'view']);
 
     Route::post('delete-quiz', [DeleteQuizController::class, 'delete'])->name('delete-quiz');
 

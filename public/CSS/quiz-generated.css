@@ -365,7 +365,7 @@ main > h2 {
 }
 .quiz-details .quiz-info {
     display: flex;
-    gap: 10rem;
+    gap: 5rem;
     transition: 0.3s;
     margin-bottom: 1rem;
     padding: 3rem;
@@ -482,6 +482,9 @@ main > h2 {
     display: inline-flex;
     align-items: center;
     color: #2e3133;
+}
+.update-quiz-form .edit-view .content .card {
+    margin-top: 5rem;
 }
 .update-quiz-form .edit-view .content .card h3 {
     background-color: #2e3133;

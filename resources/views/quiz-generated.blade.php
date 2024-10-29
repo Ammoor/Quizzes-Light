@@ -11,31 +11,26 @@
     <x-slot:pageContent>
         <h2>Your quiz has been created successfully! <i class="fa-solid fa-check"></i></h2>
         <div class="quiz-details">
-            @php
-                if (session('quizData')) {
-                    $quizData = session('quizData');
-                }
-            @endphp
             <h2>Your quiz details</h2>
             {{-- Quiz ID --}}
             <div class="quiz-info">
                 <h3>Quiz ID:</h3>
-                <p></p>
+                <p>{{ $quizData->id }}</p>
             </div>
             {{-- Quiz Specialization --}}
             <div class="quiz-info">
                 <h3>Quiz specialization:</h3>
-                <p></p>
+                <p>{{ $quizData->specialization_name }}</p>
             </div>
             {{-- Quiz Number Of Questions --}}
             <div class="quiz-info">
                 <h3>Number of questions:</h3>
-                <p></p>
+                <p>{{ $quizData->questions_number }}</p>
             </div>
             {{-- Quiz Time --}}
             <div class="quiz-info">
                 <h3>Quiz time:</h3>
-                <p>X minutes</p>
+                <p>{{ $quizData->time }} minutes</p>
             </div>
         </div>
         {{-- Update Quiz Form --}}
@@ -59,13 +54,15 @@
                     <div class="card">
                         <h3>What is the main specialization of this quiz?</h3>
                         <div class="choices">
-                            {{-- @foreach ($specializationData as $item)
-                            <div class="choice">
-                                <input type="radio" id="{{ $item->name }}" name="specialization"
-                                    value="{{ $item->name }}">
-                                <label for="{{ $item->name }}">{{ $item->name }}</label>
-                            </div>
-                        @endforeach --}}
+                            @foreach ($specializations as $specialization)
+                                @if ($specialization->name != $quizData->specialization_name)
+                                    <div class="choice">
+                                        <input type="radio" id="{{ $specialization->name }}" name="specialization"
+                                            value="{{ $specialization->name }}">
+                                        <label for="{{ $specialization->name }}">{{ $specialization->name }}</label>
+                                    </div>
+                                @endif
+                            @endforeach
                         </div>
                     </div>
                     {{-- Number Of Questions Card --}}
@@ -73,11 +70,13 @@
                         <h3>How many questions would you like to include in the quiz?</h3>
                         <div class="choices">
                             @for ($i = 1, $count = 5; $i <= 4; $i++, $count += 5)
-                                <div class="choice">
-                                    <input type="radio" id="{{ 'option-' . $i }}" name="questions-number"
-                                        value="{{ $count }}">
-                                    <label for="{{ 'option-' . $i }}">{{ $count }} questions</label>
-                                </div>
+                                @if ($count != $quizData->questions_number)
+                                    <div class="choice">
+                                        <input type="radio" id="{{ 'option-' . $i }}" name="questions-number"
+                                            value="{{ $count }}">
+                                        <label for="{{ 'option-' . $i }}">{{ $count }} questions</label>
+                                    </div>
+                                @endif
                             @endfor
                         </div>
                     </div>
@@ -86,11 +85,13 @@
                         <h3>How much time do you want to allocate for the quiz?</h3>
                         <div class="choices">
                             @for ($i = 1, $count = 5; $i <= 4; $i++, $count += 5)
-                                <div class="choice">
-                                    <input type="radio" id="{{ 'time-' . $i }}" name="quiz-time"
-                                        value="{{ $count }}">
-                                    <label for="{{ 'time-' . $i }}">{{ $count }} min</label>
-                                </div>
+                                @if ($count != $quizData->time)
+                                    <div class="choice">
+                                        <input type="radio" id="{{ 'time-' . $i }}" name="quiz-time"
+                                            value="{{ $count }}">
+                                        <label for="{{ 'time-' . $i }}">{{ $count }} min</label>
+                                    </div>
+                                @endif
                             @endfor
                         </div>
                     </div>
@@ -102,15 +103,19 @@
                                 $timeSlots = [5, 10, 30, 60]; // Time in minutes.
                             @endphp
                             @for ($i = 0; $i < sizeof($timeSlots); $i++)
-                                <div class="choice">
-                                    <input type="radio" id="{{ 'slot-' . $i + 1 }}" name="time-slot"
-                                        value="{{ $timeSlots[$i] }}">
-                                    <label for="{{ 'slot-' . $i + 1 }}">After {{ $timeSlots[$i] }} min</label>
-                                </div>
+                                @if ($timeSlots[$i] != $quizData->time_slot)
+                                    <div class="choice">
+                                        <input type="radio" id="{{ 'slot-' . $i + 1 }}" name="time-slot"
+                                            value="{{ $timeSlots[$i] }}">
+                                        <label for="{{ 'slot-' . $i + 1 }}">After {{ $timeSlots[$i] }} min</label>
+                                    </div>
+                                @endif
                             @endfor
                         </div>
                     </div>
                 </div>
+                <input hidden type="text" name="quizID" value="{{ $quizData->id }}">
+                <input hidden type="text" name="quizTimeSlot" value="{{ $quizData->time_slot }}">
                 <div class="form-buttons">
                     <button type="button" onclick="updateQuiz()">Update</button>
                     <button type="button" onclick="expandEditView()">Cancel</button>
@@ -130,6 +135,7 @@
                         with it. This action cannot be undone, and the quiz will no longer be accessible to any users.
                     </p>
                 </div>
+                <input hidden type="text" name="quizID" value="{{ $quizData->id }}">
                 <button type="button" onclick="deleteQuiz()">Delete</button>
             </div>
         </form>

@@ -18,10 +18,6 @@ class CreateQuizController extends Controller
             'time-slot' => 'required'
         ]);
 
-        $specializationID = Specialization::where('name', $request->input('specialization'))->first()->id;
-        $questions = [];
-        $answers = [];
-
         for ($i = 1; $i <= $request->input('questions-number'); $i++) {
             $questions[] = [
                 'id' => $i,
@@ -35,17 +31,15 @@ class CreateQuizController extends Controller
 
         $quizData = Quiz::create([
             'name' => 'Quiz ' . Quiz::count() + 1,
-            'specialization_id' => $specializationID,
+            'specialization_id' => Specialization::where('name', $request->input('specialization'))->first()->id,
             'time' => $request->input('quiz-time'),
             'questions' => json_encode([$questions]),
             'answers' => json_encode([$answers]),
             'grades' => json_encode([]),
         ]);
 
-        $quizData['specialization_name'] = $request->specialization;
+        $quizTimeSlot = $request['time-slot'];
 
-        session(['quizData' => $quizData]);
-
-        return redirect(route('quiz-generated'));
+        return redirect("quiz-generated/$quizData->id/$quizTimeSlot");
     }
 }

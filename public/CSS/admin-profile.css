@@ -348,7 +348,7 @@ main h2 {
 }
 .details-section .info {
     display: flex;
-    gap: 10rem;
+    gap: 5rem;
     transition: 0.3s;
     margin-bottom: 1rem;
     font-size: 2rem;
