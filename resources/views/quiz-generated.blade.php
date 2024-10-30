@@ -7,9 +7,26 @@
     </x-slot:title>
     <x-slot:styleSheet>
         <link rel="stylesheet" href="{{ asset('CSS/quiz-generated.css') }}">
+        @if (session('createMessage') || session('updateMessage'))
+            <style>
+                main>h2 {
+                    display: block;
+                    animation-name: move-down;
+                    animation-duration: 1s;
+                }
+            </style>
+        @endif
     </x-slot:styleSheet>
     <x-slot:pageContent>
-        <h2>Your quiz has been created successfully! <i class="fa-solid fa-check"></i></h2>
+        @php
+            $alertMessage = '';
+            if (session('createMessage')) {
+                $alertMessage = 'Your quiz has been created successfully!';
+            } elseif (session('updateMessage')) {
+                $alertMessage = 'Your quiz has been updated successfully!';
+            }
+        @endphp
+        <h2>{{ $alertMessage }} <i class="fa-solid fa-check"></i></h2>
         <div class="quiz-details">
             <h2>Your quiz details</h2>
             {{-- Quiz ID --}}

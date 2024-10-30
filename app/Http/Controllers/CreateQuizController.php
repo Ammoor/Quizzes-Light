@@ -40,6 +40,6 @@ class CreateQuizController extends Controller
 
         $quizTimeSlot = $request['time-slot'];
 
-        return redirect("quiz-generated/$quizData->id/$quizTimeSlot");
+        return redirect("quiz-generated/$quizData->id/$quizTimeSlot")->with(['createMessage' => true]);
     }
 }

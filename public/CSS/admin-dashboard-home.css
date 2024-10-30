@@ -334,7 +334,19 @@ input[type="checkbox"]:checked ~ .submenu {
 main {
     margin-left: 20rem;
     margin-top: 3rem;
+    padding: 2rem;
     transition: 0.3s;
+}
+.page-content h2:first-of-type {
+    display: none;
+    text-align: center;
+    width: 60%;
+    margin: 0 auto 3rem;
+    font-size: 3rem;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    color: var(--main-color-1);
+    background-color: green;
 }
 .page-content h2 {
     font-size: 3rem;
@@ -377,9 +389,20 @@ main {
 .page-content .make-quiz .quiz-button a:hover {
     opacity: 0.8;
 }
+@keyframes move-down {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
 @media screen and (max-width: 767px) {
     main {
         margin-left: 0;
+    }
+    .page-content h2:first-of-type {
+        width: 100%;
     }
     .page-content .make-quiz {
         padding: 2rem;

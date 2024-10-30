@@ -338,6 +338,7 @@ main {
     transition: 0.3s;
 }
 main > h2 {
+    display: none;
     text-align: center;
     width: 60%;
     margin: 0 auto 5rem;
@@ -346,8 +347,6 @@ main > h2 {
     border-radius: 0.5rem;
     color: var(--main-color-1);
     background-color: green;
-    animation-name: move-down;
-    animation-duration: 1s;
 }
 .quiz-details {
     background-color: #dddddd;

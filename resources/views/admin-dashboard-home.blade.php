@@ -7,9 +7,19 @@
     </x-slot:title>
     <x-slot:styleSheet>
         <link rel="stylesheet" href="{{ asset('CSS/admin-dashboard-home.css') }}">
+        @if (session('deleteMessage'))
+            <style>
+                .page-content h2:first-of-type {
+                    display: block;
+                    animation-name: move-down;
+                    animation-duration: 1s;
+                }
+            </style>
+        @endif
     </x-slot:styleSheet>
     <x-slot:pageContent>
         <div class="page-content">
+            <h2>Your quiz has been deleted successfully! <i class="fa-solid fa-check"></i></h2>
             <h2><span>{{ Auth::user()->first_name }}</span> welcome back!</h2>
             <div class="make-quiz">
                 <h3>Make your quiz</h3>
@@ -44,7 +54,7 @@
                     document.querySelector('main').style.marginLeft = '0';
                 }
             }
-            
+
             const scrollUpButton = document.querySelector('.scroll-up-button button');
             window.addEventListener('scroll', function() {
                 if (window.scrollY >= 500) {
