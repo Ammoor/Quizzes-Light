@@ -293,6 +293,7 @@ input[type="checkbox"]:checked ~ .submenu {
     text-decoration: none;
     color: #000;
     font-weight: normal;
+    border-radius: 0.7rem;
 }
 .submenu li a:hover {
     color: black;

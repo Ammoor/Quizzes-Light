@@ -414,6 +414,27 @@ main .quiz-details .quiz-info p {
     display: inline-flex;
     align-items: end;
 }
+main .quiz-details .quiz-buttons {
+    display: flex;
+    gap: 2rem;
+    margin-top: 5rem;
+}
+main .quiz-details .quiz-buttons a {
+    transition: 0.3s;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    padding: 2rem 3rem;
+    color: var(--main-color-1);
+}
+main .quiz-details .quiz-buttons a:first-of-type {
+    background-color: var(--main-color-3);
+}
+main .quiz-details .quiz-buttons a:last-of-type {
+    background-color: #0d1117;
+}
+main .quiz-details .quiz-buttons a:hover {
+    background-color: #6b6e70;
+}
 @keyframes move-down {
     from {
         transform: translateY(-100%);

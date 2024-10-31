@@ -62,7 +62,7 @@ Route::middleware('auth:administrator')->group(function () {
 
     Route::post('generate-quiz', [CreateQuizController::class, 'store'])->name('generate-quiz');
 
-    Route::get('/quiz-generated/{quizID}/{quizTimeSlot}', [ViewGeneratedQuizController::class, 'view']);
+    Route::get('/quiz-generated/{quizID}/{quizTimeSlot}', [ViewGeneratedQuizController::class, 'view'])->name('quiz-generated');
 
     Route::post('delete-quiz', [DeleteQuizController::class, 'delete'])->name('delete-quiz');
 

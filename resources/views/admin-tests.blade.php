@@ -37,6 +37,12 @@
                         <h3>Quiz time:</h3>
                         <p>{{ $quizData['quizTime'] }} minutes</p>
                     </div>
+                    <div class="quiz-buttons">
+                        <a
+                            href="{{ route('quiz-generated', ['quizID' => $quizData['quizID'], 'quizTimeSlot' => 1]) }}">Update</a>
+                        <a
+                            href="{{ route('quiz-generated', ['quizID' => $quizData['quizID'], 'quizTimeSlot' => 1]) }}">Delete</a>
+                    </div>
                 </div>
                 @php
                     $cnt++;
