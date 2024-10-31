@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Specialization;
+use App\Models\Administrator;
 use App\Models\Quiz;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Faker\Factory as Faker;
 
@@ -33,10 +35,16 @@ class CreateQuizController extends Controller
             'name' => 'Quiz ' . Quiz::count() + 1,
             'specialization_id' => Specialization::where('name', $request->input('specialization'))->first()->id,
             'time' => $request->input('quiz-time'),
-            'questions' => json_encode([$questions]),
-            'answers' => json_encode([$answers]),
+            'questions' => json_encode($questions),
+            'answers' => json_encode($answers),
             'grades' => json_encode([]),
         ]);
+
+        $adminData = Administrator::where('id', Auth::user()->id)->first();
+        $adminQuizzes = json_decode($adminData->quizzes);
+        $adminQuizzes[] = ['quiz_id' => $quizData->id];
+
+        $adminData->update(['quizzes' => json_encode($adminQuizzes)]);
 
         $quizTimeSlot = $request['time-slot'];
 

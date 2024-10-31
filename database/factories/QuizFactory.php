@@ -16,9 +16,6 @@ class QuizFactory extends Factory
      */
     public function definition(): array
     {
-        $questions = [];
-        $answers = [];
-        $grades = [];
         for ($i = 1; $i <= 10; $i++) { // Create 10 questions per quiz.
             $questions[] = [
                 'id' => $i,
@@ -39,9 +36,9 @@ class QuizFactory extends Factory
             'name' => 'Quiz ' . $this->faker->unique()->numberBetween(50, 100),
             'specialization_id' => $this->faker->numberBetween(1, 7), // 7 specializations
             'time' => $this->faker->numberBetween(5, 20), // Duration in minutes
-            'questions' => json_encode([$questions]),
-            'answers' => json_encode([$answers]),
-            'grades' => json_encode([$grades]),
+            'questions' => json_encode($questions),
+            'answers' => json_encode($answers),
+            'grades' => json_encode($grades),
             'created_at' => now(),
             'updated_at' => now(),
         ];

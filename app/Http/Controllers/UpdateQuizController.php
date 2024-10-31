@@ -28,7 +28,7 @@ class UpdateQuizController extends Controller
                     'answer_text' => 'The right answer',
                 ];
             }
-            $quizRecord->update(['questions' => json_encode([$questions]), 'answers' => json_encode([$answers])]);
+            $quizRecord->update(['questions' => json_encode($questions), 'answers' => json_encode($answers)]);
         }
         # Time
         if ($request['quiz-time']) {

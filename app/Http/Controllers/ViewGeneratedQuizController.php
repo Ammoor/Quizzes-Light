@@ -14,7 +14,7 @@ class ViewGeneratedQuizController extends Controller
         $quizData = Quiz::where('id', $quizID)->first();
         $quizData['specialization_name'] = Specialization::where('id', $quizData->specialization_id)->first()->name;
         $quizData['time_slot'] = $quizTimeSlot;
-        $quizData['questions_number'] = count(json_decode($quizData['questions'])[0]);
+        $quizData['questions_number'] = count(json_decode($quizData['questions']));
         return view('quiz-generated', compact('quizData', 'specializations'));
     }
 }

@@ -67,6 +67,8 @@ Route::middleware('auth:administrator')->group(function () {
     Route::post('delete-quiz', [DeleteQuizController::class, 'delete'])->name('delete-quiz');
 
     Route::post('update-quiz', [UpdateQuizController::class, 'update'])->name('update-quiz');
+
+    Route::get('/admin-tests', [FetchFromDataBase::class, 'adminQuizzesData']);
 });
 
 Route::get('/dashboard', function () {
