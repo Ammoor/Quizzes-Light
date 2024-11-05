@@ -226,62 +226,21 @@ nav a:hover {
     color: #2e3133;
     background-color: var(--main-color-1);
 }
-/* Start Of tests Section */
+/* Start Of Question Card Section */
 main {
-    padding: 5rem;
-}
-main .grade-msg {
-    display: none;
-    text-align: center;
-    width: 60%;
-    margin: 0 auto 5rem;
-    font-size: 3rem;
-    padding: 2rem;
-    border-radius: 0.5rem;
-    line-height: 4.5rem;
-    color: var(--main-color-1);
-    background-color: green;
-}
-main .grade-msg h2 {
-    margin: 0;
-}
-main .grade-msg h2 span {
-    color:#fac342;
-    margin-left: 2rem;
-}
-main h2 {
-    font-size: 3rem;
-    margin-bottom: 5rem;
-}
-main .no-quizzes-card {
-    width: 60%;
-    margin: 0 auto;
-    border-radius: 0.5rem;
-    padding: 2rem;
-    background-color: #dddddd;
-    animation-name: move-down;
-    animation-duration: 1.5s;
-}
-main .no-quizzes-card h2 {
-    color: var(--main-color-1);
-    background-color: #2e3133;
-    text-align: center;
-    line-height: 4.5rem;
-    padding: 3rem;
-    margin-bottom: 0;
-    border-radius: 0.5rem;
-}
-main .no-quizzes-card h2 span {
-    color: #fac342;
-    margin-left: 2rem;
-}
-main .quiz-details {
-    background-color: #dddddd;
-    padding: 5rem;
-    border-radius: 0.5rem;
+    padding: 10rem;
     margin-bottom: 10rem;
 }
-main .quiz-details h2 {
+main .question-card {
+    display: none;
+    background-color: #dddddd;
+    padding: 5rem;
+    border-radius: 0.5rem;
+}
+main .question-card.active {
+    display: block;
+}
+main .question-card h2 {
     background-color: #2e3133;
     color: var(--main-color-1);
     font-size: 2.5rem;
@@ -289,40 +248,94 @@ main .quiz-details h2 {
     padding: 3rem;
     border-radius: 0.5rem;
 }
-main .quiz-details .quiz-info {
-    display: flex;
-    gap: 5rem;
-    transition: 0.3s;
-    margin-bottom: 1rem;
-    padding: 3rem;
-    font-size: 2rem;
-    border-radius: 0.5rem;
-    color: #2e3133;
-    background-color: var(--main-color-1);
+main .question-card h2 span {
+    color: red;
 }
-main .quiz-details .quiz-info:hover {
+main .question-card .answers .answer {
+    display: flex;
+    gap: 3rem;
+    transition: 0.3s;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+}
+main .question-card .answers .answer:hover {
+    background-color: #2e3133;
+    color: var(--main-color-1);
+    cursor: pointer;
+}
+/* © FreeFrontend by Temani Afif */
+main .question-card .answers .answer input[type="radio"] {
+    --s: 3rem; /* control the size */
+    --c: var(--main-color-3); /* the active color */
+    height: var(--s);
+    aspect-ratio: 1;
+    border: calc(var(--s) / 8) solid #2e3133;
+    padding: calc(var(--s) / 8);
+    background: radial-gradient(farthest-side, var(--c) 94%, #0000) 50%/0 0
+        no-repeat content-box;
+    border-radius: 50%;
+    outline-offset: calc(var(--s) / 10);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    font-size: inherit;
+    transition: 0.3s;
+}
+main .question-card .answers .answer:hover input[type="radio"] {
+    border: calc(var(--s) / 8) solid var(--main-color-1);
+}
+main .question-card .answers .answer input[type="radio"]:checked {
+    border-color: var(--c);
+    background-size: 100% 100%;
+}
+main .question-card .answers .answer label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 2rem;
+}
+/* © FreeFrontend by Temani Afif */
+main .crnt-card-number {
+    margin-top: 2rem;
+    font-size: 2rem;
+    text-align: center;
+}
+main .form-buttons {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+main .form-buttons button {
     color: var(--main-color-1);
     background-color: #2e3133;
+    transition: 0.3s;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 2rem 3rem;
 }
-main .quiz-details .quiz-info h3 {
-    font-weight: 500;
+main .form-buttons button:hover {
+    background-color: var(--main-color-3);
 }
-main .quiz-details .quiz-info p {
-    font-weight: 400;
-    display: inline-flex;
-    align-items: end;
+main .form-buttons .submit {
+    position: absolute;
+    left: calc(50% - 5rem);
+    margin-top: 10rem;
+    background-color: green;
 }
-@keyframes move-down {
-    from {
-        transform: translateY(-100%);
-    }
-    to {
-        transform: translateY(0);
-    }
+main .form-buttons .submit:hover {
+    background-color: #6b6e70;
 }
-@media screen and (max-width: 767px) {
-    main .no-quizzes-card,
-    main h2:first-of-type {
-        width: 100%;
-    }
+main .form-buttons .next {
+    position: absolute;
+    right: 10rem;
+}
+main .form-buttons button.not-allowed {
+    cursor: not-allowed;
+    background-color: #8f959b;
+    opacity: 0.5;
 }

@@ -41,6 +41,7 @@ class RegisteredAdministratorController extends Controller
             'last_name' => $request->input('last-name'),
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'quizzes' => json_encode([]),
         ]);
 
         event(new Registered($administrator));

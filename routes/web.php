@@ -6,6 +6,7 @@ use App\Http\Controllers\CreateQuizController;
 use App\Http\Controllers\ViewGeneratedQuizController;
 use App\Http\Controllers\DeleteQuizController;
 use App\Http\Controllers\UpdateQuizController;
+use App\Http\Controllers\CheckQuizAnswersController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -44,9 +45,11 @@ Route::middleware('auth')->group(function () {
         return view("student-profile");
     });
 
-    Route::get('/student-tests', function () {
-        return view("student-tests");
-    });
+    Route::get('/student-tests', [FetchFromDataBase::class, 'studentQuizzesData']);
+
+    Route::get('test-page', [FetchFromDataBase::class, 'quizQuestions']);
+
+    Route::post('check-quiz-answers', [CheckQuizAnswersController::class, 'checkQuizAnswers'])->name('check-quiz-answers');
 });
 
 Route::middleware('auth:administrator')->group(function () {
@@ -62,7 +65,7 @@ Route::middleware('auth:administrator')->group(function () {
 
     Route::post('generate-quiz', [CreateQuizController::class, 'store'])->name('generate-quiz');
 
-    Route::get('/quiz-generated/{quizID}/{quizTimeSlot}', [ViewGeneratedQuizController::class, 'view'])->name('quiz-generated');
+    Route::get('/quiz-generated/{quizID}', [ViewGeneratedQuizController::class, 'view'])->name('quiz-generated');
 
     Route::post('delete-quiz', [DeleteQuizController::class, 'delete'])->name('delete-quiz');
 

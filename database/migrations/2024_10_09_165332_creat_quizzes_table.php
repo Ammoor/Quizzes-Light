@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name')->unique();
             $table->foreignId('specialization_id')->constrained('specializations');
             $table->integer('time');
+            $table->integer('time_slot');
             $table->json('questions');
             $table->json('answers');
             $table->json('grades');

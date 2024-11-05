@@ -11,12 +11,9 @@
     <x-slot:pageContent>
         <h2>My Quizzes</h2>
         @if (count($quizzesData))
-            @php
-                $cnt = 1;
-            @endphp
-            @foreach ($quizzesData as $quizData)
+            @foreach ($quizzesData as $cnt => $quizData)
                 <div class="quiz-details">
-                    <h2>Your quiz {{ $cnt }} details</h2>
+                    <h2>Your quiz {{ $cnt + 1 }} details</h2>
                     {{-- Quiz ID --}}
                     <div class="quiz-info">
                         <h3>Quiz ID:</h3>
@@ -38,15 +35,10 @@
                         <p>{{ $quizData['quizTime'] }} minutes</p>
                     </div>
                     <div class="quiz-buttons">
-                        <a
-                            href="{{ route('quiz-generated', ['quizID' => $quizData['quizID'], 'quizTimeSlot' => 1]) }}">Update</a>
-                        <a
-                            href="{{ route('quiz-generated', ['quizID' => $quizData['quizID'], 'quizTimeSlot' => 1]) }}">Delete</a>
+                        <a href="{{ route('quiz-generated', ['quizID' => $quizData['quizID']]) }}">Update</a>
+                        <a href="{{ route('quiz-generated', ['quizID' => $quizData['quizID']]) }}">Delete</a>
                     </div>
                 </div>
-                @php
-                    $cnt++;
-                @endphp
             @endforeach
         @else
             <div class="no-quizzes-card">

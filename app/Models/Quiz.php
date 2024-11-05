@@ -12,6 +12,7 @@ class Quiz extends Model
         'name',
         'specialization_id',
         'time',
+        'time_slot',
         'questions',
         'answers',
         'grades',

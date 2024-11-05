@@ -27,7 +27,6 @@ class QuizFactory extends Factory
             ];
             $grades[] = [
                 'id' => $i,
-                'quiz_id' => $this->faker->numberBetween(1, 100),
                 'student_id' => $this->faker->numberBetween(1, 100),
                 'grade' => $this->faker->numberBetween(0, 20),
             ];
@@ -36,6 +35,7 @@ class QuizFactory extends Factory
             'name' => 'Quiz ' . $this->faker->unique()->numberBetween(50, 100),
             'specialization_id' => $this->faker->numberBetween(1, 7), // 7 specializations
             'time' => $this->faker->numberBetween(5, 20), // Duration in minutes
+            'time_slot' => $this->faker->numberBetween(5, 60), // Duration in minutes
             'questions' => json_encode($questions),
             'answers' => json_encode($answers),
             'grades' => json_encode($grades),

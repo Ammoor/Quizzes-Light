@@ -121,7 +121,6 @@
                             <li>PHP Laravel Full-Stack Web Developer Intern @ DEPI</li>
                             <li>Aspire Leaders Program Intern @ Aspire Institute</li>
                             <li>Full-Stack Developer @ <span><span>Quizzes</span> Light</span></li>
-                            <li><span><span>Quizzes</span> Light</span> Team Leader</li>
                         </ul>
                     </div>
                     <div class="links">

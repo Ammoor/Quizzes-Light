@@ -15,6 +15,7 @@ class Student extends Authenticatable
         'last_name',
         'email',
         'password',
+        'quizzes',
     ];
 
     protected $hidden = [

@@ -23,6 +23,7 @@ class StudentFactory extends Factory
             'last_name' => $this->faker->lastName(),
             'email' => $this->faker->unique()->safeEmail,
             'password' =>  Hash::make('password'),
+            'quizzes' => json_encode([]),
             'email_verified_at' => now(),
             'remember_token' => Str::random(10),
         ];
