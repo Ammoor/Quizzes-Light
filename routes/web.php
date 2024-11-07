@@ -47,7 +47,7 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/student-tests', [FetchFromDataBase::class, 'studentQuizzesData']);
 
-    Route::get('test-page', [FetchFromDataBase::class, 'quizQuestions']);
+    Route::get('test-page/{quizID}', [FetchFromDataBase::class, 'quizQuestions'])->name('test-page');
 
     Route::post('check-quiz-answers', [CheckQuizAnswersController::class, 'checkQuizAnswers'])->name('check-quiz-answers');
 });

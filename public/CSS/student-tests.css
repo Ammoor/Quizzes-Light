@@ -246,7 +246,7 @@ main .grade-msg h2 {
     margin: 0;
 }
 main .grade-msg h2 span {
-    color:#fac342;
+    color: #fac342;
     margin-left: 2rem;
 }
 main h2 {
@@ -308,9 +308,33 @@ main .quiz-details .quiz-info h3 {
     font-weight: 500;
 }
 main .quiz-details .quiz-info p {
+    border-radius: 0.5rem;
     font-weight: 400;
     display: inline-flex;
     align-items: end;
+}
+main .quiz-details .quiz-info p#time-slot.quiz-running {
+    padding: 0.5rem;
+    background-color: green;
+    color: var(--main-color-1);
+}
+main .quiz-details .start-quiz-button {
+    margin-top: 5rem;
+    display: none;
+}
+main .quiz-details .start-quiz-button.active {
+    display: block;
+}
+main .quiz-details .start-quiz-button a {
+    transition: 0.3s;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    padding: 2rem 3rem;
+    color: var(--main-color-1);
+    background-color: var(--main-color-3);
+}
+main .quiz-details .start-quiz-button a:hover {
+    background-color: #6b6e70;
 }
 @keyframes move-down {
     from {

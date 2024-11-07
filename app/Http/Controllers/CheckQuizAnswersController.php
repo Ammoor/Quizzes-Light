@@ -26,6 +26,6 @@ class CheckQuizAnswersController extends Controller
                 'grade' => $rightAnswers,
             ];
         $quizData->update(['grades' => json_encode($quizGrades)]);
-        return  redirect('student-tests')->with(['grade_confirmation' => true]);
+        return  redirect('student-tests')->with(['quizIdGradeConfirmation' => $request->quizID]);
     }
 }

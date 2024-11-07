@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Quiz;
 use App\Models\Specialization;
+use Carbon\Carbon;
 use Faker\Factory as Faker;
 
 class FetchFromDataBase extends Controller
@@ -50,19 +51,19 @@ class FetchFromDataBase extends Controller
                     'quizNumberQuestions' => count(json_decode($studentQuiz->questions)),
                     'quizTime' => $studentQuiz->time,
                     'quizTimeSlot' => $studentQuiz->time_slot,
+                    'quizGeneratedTime' => Carbon::parse(Quiz::where('id', $studentQuiz->id)->first()->created_at)->timestamp, // In timestamp.
                     'studentGrade' => $studentGrade,
                 ];
         }
         return view('student-tests', compact('quizzesData'));
     }
-    public function quizQuestions()
+    public function quizQuestions($quizID)
     {
-        $studentQuizzes = json_decode(Auth::user()->quizzes);
-        $quizQuestions = json_decode(Quiz::where('id', $studentQuizzes[0]->quiz_id)->first()->questions);
-        $quizQuestionsAnswers = json_decode(Quiz::where('id', $studentQuizzes[0]->quiz_id)->first()->answers);
+        $quizRecord = Quiz::where('id', $quizID)->first();
+        $quizQuestions = json_decode($quizRecord->questions);
+        $quizQuestionsAnswers = json_decode($quizRecord->answers);
         $questionsData = [];
-        // Assign quiz ID.
-        $questionsData['quizID'] =  $studentQuizzes[0]->quiz_id;
+        $quizData = [];
         // Assign questions.
         foreach ($quizQuestions as $quizQuestion) {
             $questionsData['questions'][] = $quizQuestion->question_text;
@@ -76,6 +77,9 @@ class FetchFromDataBase extends Controller
             $questionsData['answers'][] = $answersArray;
             $questionsData['answers'][$index][rand(0, 3)] = $quizQuestionAnswers->answer_text;
         }
-        return view('test-page', compact('questionsData'));
+        // Assign quiz data.
+        $quizData['quizID'] = $quizID;
+        $quizData['quizTime'] = $quizRecord->time;
+        return view('test-page', compact('questionsData', 'quizData'));
     }
 }
