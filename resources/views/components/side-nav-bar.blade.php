@@ -35,7 +35,7 @@
     <div class="sidebar" id="sidebar">
         <!-- Dashboard link -->
         <div>
-            <a href="admin-dashboard-home" class="Dashboard"> <i class="fas fa-home"></i> Dashboard</a>
+            <a href="{{ url('admin-dashboard-home') }}" class="Dashboard"> <i class="fas fa-home"></i> Dashboard</a>
         </div>
         <!-- Container for Tests dropdown -->
         <div>
@@ -46,7 +46,7 @@
             </label>
             <!-- Submenu for Tests -->
             <ul class="submenu">
-                <li><a href="admin-tests" id="all-tests">All Quizzes</a></li>
+                <li><a href="{{ url('admin-tests') }}" id="all-tests">All Quizzes</a></li>
                 <li><a href="#">Question Bank</a></li>
                 <li><a href="#">Categories</a></li>
                 <li><a href="#">Certificates</a></li>

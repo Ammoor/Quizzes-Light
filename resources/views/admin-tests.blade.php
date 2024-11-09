@@ -37,6 +37,8 @@
                     <div class="quiz-buttons">
                         <a href="{{ route('quiz-generated', ['quizID' => $quizData['quizID']]) }}">Update</a>
                         <a href="{{ route('quiz-generated', ['quizID' => $quizData['quizID']]) }}">Delete</a>
+                        <a href="{{ route('students-statistics', ['quizID' => $quizData['quizID']]) }}">Students
+                            Statistics</a>
                     </div>
                 </div>
             @endforeach

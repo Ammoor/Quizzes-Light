@@ -331,7 +331,7 @@ input[type="checkbox"]:checked ~ .submenu {
         display: block; /* Show the toggle button on small screens */
     }
 }
-/* Start Of My Quizzes Section */
+/* Start Of Students Statistics Section */
 main {
     margin-left: 20rem;
     margin-top: 3rem;
@@ -342,48 +342,35 @@ main h2 {
     font-size: 3rem;
     margin-bottom: 5rem;
 }
-main .no-quizzes-card {
+main .no-responses {
     width: 60%;
     margin: 0 auto;
     border-radius: 0.5rem;
+    line-height: 4.5rem;
     padding: 2rem;
     background-color: #dddddd;
     animation-name: move-down;
     animation-duration: 1.5s;
 }
-main .no-quizzes-card h2 {
+main .no-responses h2 {
     color: var(--main-color-1);
     background-color: #2e3133;
     text-align: center;
     padding: 3rem;
+    margin: 0;
     border-radius: 0.5rem;
 }
-main .no-quizzes-card h2 span {
+main .no-responses h2 span {
     color: #fac342;
+    margin-left: 1rem;
 }
-main .no-quizzes-card a {
-    background-color: var(--main-color-3);
-    color: var(--main-color-1);
-    display: inline-block;
-    font-weight: bold;
-    transition: 0.3s;
-    font-size: 1.5rem;
-    padding: 2rem;
-    border-radius: 0.5rem;
-}
-main .no-quizzes-card a span {
-    color: #2e3133;
-}
-main .no-quizzes-card a:hover {
-    background-color: #6b6e70;
-}
-main .quiz-details {
+main .student-details {
     background-color: #dddddd;
     padding: 5rem;
     border-radius: 0.5rem;
     margin-bottom: 10rem;
 }
-main .quiz-details h2 {
+main .student-details h2 {
     background-color: #2e3133;
     color: var(--main-color-1);
     font-size: 2.5rem;
@@ -391,7 +378,7 @@ main .quiz-details h2 {
     padding: 3rem;
     border-radius: 0.5rem;
 }
-main .quiz-details .quiz-info {
+main .student-details .student-info {
     display: flex;
     gap: 5rem;
     transition: 0.3s;
@@ -402,41 +389,28 @@ main .quiz-details .quiz-info {
     color: #2e3133;
     background-color: var(--main-color-1);
 }
-main .quiz-details .quiz-info:hover {
+main .student-details .student-info:hover {
     color: var(--main-color-1);
     background-color: #2e3133;
 }
-main .quiz-details .quiz-info h3 {
+main .student-details .student-info h3 {
     font-weight: 500;
 }
-main .quiz-details .quiz-info p {
+main .student-details .student-info p {
+    border-radius: 0.5rem;
     font-weight: 400;
     display: inline-flex;
     align-items: end;
 }
-main .quiz-details .quiz-buttons {
-    display: flex;
-    gap: 2rem;
-    margin-top: 5rem;
-}
-main .quiz-details .quiz-buttons a {
-    transition: 0.3s;
-    border-radius: 0.5rem;
-    font-size: 1.5rem;
-    padding: 2rem 3rem;
+main .student-details .student-info p.no-grade {
+    padding: 0.5rem;
+    background-color: var(--main-color-3);
     color: var(--main-color-1);
 }
-main .quiz-details .quiz-buttons a:first-of-type {
-    background-color: var(--main-color-3);
-}
-main .quiz-details .quiz-buttons a:nth-of-type(2) {
-    background-color: #0d1117;
-}
-main .quiz-details .quiz-buttons a:last-of-type {
+main .student-details .student-info p.grade {
+    padding: 0.5rem;
     background-color: green;
-}
-main .quiz-details .quiz-buttons a:hover {
-    background-color: #6b6e70;
+    color: var(--main-color-1);
 }
 @keyframes move-down {
     from {
@@ -450,7 +424,7 @@ main .quiz-details .quiz-buttons a:hover {
     main {
         margin-left: 0;
     }
-    main .no-quizzes-card {
+    main .no-responses {
         width: 100%;
     }
 }

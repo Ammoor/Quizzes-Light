@@ -10,13 +10,13 @@
                 <label class="for-dropdown" for="dropdown">{{ Auth::user()->first_name . ' ' . Auth::user()->last_name }}
                     <i class="fa-solid fa-arrow-down"></i></label>
                 <div class="section-dropdown">
-                    <a href="admin-dashboard-home"
+                    <a href="{{ url('admin-dashboard-home') }}"
                         style="@if (request()->is('admin-dashboard-home')) background-color: #ffeba7; color: #102770; @endif">Home
                         <i class="fa-solid fa-arrow-right"></i></a>
-                    <a href="admin-profile"
+                    <a href="{{ url('admin-profile') }}"
                         style="@if (request()->is('admin-profile')) background-color: #ffeba7; color: #102770; @endif">My
                         profile <i class="fa-solid fa-arrow-right"></i></a>
-                    <form action="{{ 'logout-admin' }}" method="POST">
+                    <form action="{{ url('logout-admin') }}" method="POST">
                         @csrf
                         <a href="logout" onclick="event.preventDefault();this.closest('form').submit();">
                             Log Out <i class="fa-solid fa-arrow-right"></i>

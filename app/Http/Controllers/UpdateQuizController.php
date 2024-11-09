@@ -38,6 +38,6 @@ class UpdateQuizController extends Controller
         if ($request['time-slot']) {
             $request['quizTimeSlot'] = $request['time-slot'];
         }
-        return redirect("quiz-generated/$request->quizID/$request->quizTimeSlot")->with(['updateMessage' => true]);
+        return redirect("quiz-generated/$request->quizID")->with(['updateMessage' => true]);
     }
 }

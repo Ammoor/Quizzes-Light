@@ -72,6 +72,8 @@ Route::middleware('auth:administrator')->group(function () {
     Route::post('update-quiz', [UpdateQuizController::class, 'update'])->name('update-quiz');
 
     Route::get('/admin-tests', [FetchFromDataBase::class, 'adminQuizzesData']);
+
+    Route::get('/students-statistics/{quizID}', [FetchFromDataBase::class, 'studentsData'])->name('students-statistics');
 });
 
 Route::get('/dashboard', function () {

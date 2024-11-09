@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Quiz;
 use App\Models\Specialization;
+use App\Models\Student;
 use Carbon\Carbon;
 use Faker\Factory as Faker;
 
@@ -81,5 +82,27 @@ class FetchFromDataBase extends Controller
         $quizData['quizID'] = $quizID;
         $quizData['quizTime'] = $quizRecord->time;
         return view('test-page', compact('questionsData', 'quizData'));
+    }
+    public function studentsData($quizID)
+    {
+        $quizRecord = Quiz::where('id', $quizID)->first();
+        $students = Student::all();
+        $studentsGrades = json_decode($quizRecord->grades);
+        $studentsIds = [];
+        $studentsData  = [];
+        foreach ($studentsGrades as $studentGrade) {
+            $studentsIds["student-$studentGrade->student_id"] = $studentGrade->grade;
+        }
+        foreach ($students as $student) {
+            $studentsData[] =
+                [
+                    'studentId' => $student->id,
+                    'email' => $student->email,
+                    'firstName' => $student->first_name,
+                    'lastName' => $student->last_name,
+                    'quizGrade' => array_key_exists("student-$student->id", $studentsIds) ? $studentsIds["student-$student->id"] : null,
+                ];
+        }
+        return  view('students-statistics', compact('studentsData'));
     }
 }

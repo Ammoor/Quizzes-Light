@@ -44,7 +44,7 @@
                         <ul>
                             <li>Senior student at October 6 University</li>
                             <li>PHP Laravel Full-Stack Web Developer Intern @ DEPI</li>
-                            <li>Front-End react JS Intern @ ITI</li>
+                            <li>Front-End React JS Intern @ ITI</li>
                             <li>Front-End Developer @ <span><span>Quizzes</span> Light</span></li>
                         </ul>
                     </div>
