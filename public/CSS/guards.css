@@ -116,6 +116,27 @@ nav a:hover {
     color: #2e3133;
     background-color: var(--main-color-1);
 }
+/* Start Of Documentation Section */
+.documentation {
+    margin-top: 5rem;
+    text-align: center;
+}
+.documentation a {
+    color: var(--main-color-3);
+    background-color: var(--main-color-1);
+    border: 2px solid var(--main-color-3);
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: 0.3s;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    font-size: 2rem;
+}
+.documentation a:hover {
+    transform: translate(-5%, -10%);
+    box-shadow: 1.5rem -1.5rem 0 0 var(--main-color-3);
+}
 /* Start Of Cards Section */
 .cards-section {
     padding-top: calc(var(--section-padding) / 2);
