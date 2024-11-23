@@ -9,6 +9,33 @@
         <link rel="stylesheet" href="{{ asset('CSS/home.css') }}">
     </x-slot:styleSheet>
     <x-slot:pageContent>
+        <!-- Start Of Promo Video Section -->
+        <div class="promo-video-section">
+            <div class="promo-video-text">
+                <div class="header">
+                    <span>Brighten Your Skills</span>
+                    <span>Quiz by Quiz</span>
+                </div>
+                <div class="description">
+                    <p><span><span>Quizzes</span> Light</span> transforms learning into an adventure, where curiosity
+                        drives exploration, and
+                        <span>every quiz feels like a spark of inspiration.</span>
+                    </p>
+                    <p>Whether you're a student looking to master a subject or a lifelong learner eager to explore new
+                        topics, <span><span>Quizzes</span> Light</span> is your ultimate destination for <span>enjoyable
+                            and rewarding learning experiences.</span></p>
+                </div>
+                <div class="register-button">
+                    <a href="{{ url('guards') }}">Register now!</a>
+                </div>
+            </div>
+            <div class="promo-video">
+                <video controls autoplay muted>
+                    <source src="{{ asset('Video/Quizzes Light promo video.mp4') }}" type="video/mp4">
+                    Your browser does not support video tag.
+                </video>
+            </div>
+        </div>
         <!-- Start Of Services Section -->
         <div class="services" id="services-section">
             <div class="container">

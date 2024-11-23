@@ -158,6 +158,80 @@ nav a:hover {
     transform: translate(-5%, -10%);
     box-shadow: 1.5rem -1.5rem 0 0 var(--main-color-3);
 }
+/* Start Of Promo Video Section */
+.promo-video-section {
+    display: flex;
+    padding-top: var(--section-padding);
+}
+.promo-video-section .promo-video-text {
+    padding: 0 5rem;
+    width: 60%;
+}
+.promo-video-section .promo-video-text .header {
+    line-height: 8rem;
+}
+.promo-video-section .promo-video-text .header span {
+    display: block;
+    word-spacing: -1.5rem;
+    font-weight: 800;
+    font-size: 8rem;
+}
+.promo-video-section .promo-video-text .header span:first-of-type {
+    color: var(--main-color-3);
+}
+.promo-video-section .promo-video-text .header span:last-of-type {
+    color: #2e3133;
+}
+.promo-video-section .promo-video-text .description {
+    font-size: 2rem;
+    color: #2e3133;
+}
+.promo-video-section .promo-video-text .description p {
+    padding-top: 5rem;
+}
+.promo-video-section .promo-video-text .description p:last-of-type {
+    padding-top: 2rem;
+}
+.promo-video-section .promo-video-text .description p span {
+    font-weight: bold;
+}
+.promo-video-section .promo-video-text .description p span span {
+    color: var(--main-color-3);
+}
+.promo-video-section .promo-video-text .register-button {
+    padding-top: 2rem;
+}
+.promo-video-section .promo-video-text .register-button a {
+    color: var(--main-color-1);
+    background-color: var(--main-color-3);
+    display: inline-block;
+    padding: 2rem 8rem;
+    font-size: 2rem;
+    border-radius: 50rem;
+}
+.promo-video-section .promo-video-text .register-button a:hover {
+    background-color: #2e3133;
+}
+.promo-video-section .promo-video {
+    width: 40%;
+}
+.promo-video-section .promo-video video {
+    display: block;
+    width: 95%;
+}
+@media screen and (max-width: 767px) {
+    .promo-video-section {
+        flex-direction: column;
+        gap: 5rem;
+    }
+    .promo-video-section .promo-video-text,
+    .promo-video-section .promo-video {
+        width: 100%;
+    }
+    .promo-video-section .promo-video video {
+        margin: 0 auto;
+    }
+}
 /* Start Of Services Section */
 .main-heading {
     text-align: center;
