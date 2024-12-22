@@ -1,66 +1,153 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<div style="text-align:center; background-color:white; border-radius:10px" align="center">
+<img src="./public/Imgs/Logo-3.png" alt="Quizzes Light Logo" />
+</div>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## 1. Introduction
 
-## About Laravel
+The **<span style="color:#ff3131">Quizzes</span> Light** Platform is a <span style="color:#ff3131">**Laravel-based**</span> application that allows admins to create and manage quizzes, while students can participate in the quizzes. The platform is built with two distinct guards for authentication: admin and student. Each guard has different roles and permissions within the system.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 2. Used Technologies
 
--   [Simple, fast routing engine](https://laravel.com/docs/routing).
--   [Powerful dependency injection container](https://laravel.com/docs/container).
--   Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
--   Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
--   Database agnostic [schema migrations](https://laravel.com/docs/migrations).
--   [Robust background job processing](https://laravel.com/docs/queues).
--   [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Front-End:
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+-   HTML (Laravel Blade)
+-   CSS
+-   JavaScript
+-   Font Awesome Library
 
-## Learning Laravel
+### Back-End:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+-   PHP
+-   MySQL
+-   Laravel
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## 3. Prerequisites
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Before running the application, ensure you have the following installed:
 
-## Laravel Sponsors
+-   PHP 8.2 or higher
+-   PHP Composer
+-   Laravel 11.x
+-   MySQL or phpMyAdmin DataBase
+-   Web Server (ex: Apache, Tomcat, Nginx)
+-   All in one solutions (ex: XAMPP, Laragon, Laravel Herd)
+-   Font Awesome Library
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## 4. Installation and Set The Project Environment
 
-### Premium Partners
+To set up the project, follow these steps:
 
--   **[Vehikl](https://vehikl.com/)**
--   **[Tighten Co.](https://tighten.co)**
--   **[WebReinvent](https://webreinvent.com/)**
--   **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
--   **[64 Robots](https://64robots.com)**
--   **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
--   **[Cyber-Duck](https://cyber-duck.co.uk)**
--   **[DevSquad](https://devsquad.com/hire-laravel-developers)**
--   **[Jump24](https://jump24.co.uk)**
--   **[Redberry](https://redberry.international/laravel/)**
--   **[Active Logic](https://activelogic.com)**
--   **[byte5](https://byte5.de)**
--   **[OP.GG](https://op.gg)**
+1- Clone the repository:
 
-## Contributing
+```Bash
+git clone <repository-url>
+Cd Quizzes-Light
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+2- Install dependencies:
 
-## Code of Conduct
+```Bash
+composer install
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+3- Create a **<span style="color:#ff3131">.env</span>** file:
 
-## Security Vulnerabilities
+Make sure you set the **<span style="color:#ff3131">.env</span>** file in your project environment to make the necessary Configuration.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+4- Run migrations and seed the database:
 
-## License
+```Bash
+php artisan migrate --seed
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+5- Start the development server: (If you do not make a [virtual host](https://httpd.apache.org/docs/2.4/vhosts/))
+
+## 5- Configuration
+
+The **<span style="color:#ff3131">.env</span>** file should be configured with the following:
+
+-   **APP_URL:** The URL where your app will be hosted.
+-   **DB_CONNECTION, DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME, DB_PASSWORD: Database configuration.**
+
+## 6- User Authentication
+
+The app uses two authentication guards: **<span style="color:#ff3131">admin</span>** and **<span style="color:#ff3131">student</span>**. Each guard enters their credentials through a dedicated URL to prevent unauthorized access.
+
+### Admin Guard:
+
+-   **Role:** Manages quizzes, and questions, and monitors student progress.
+-   **Access:** Admins can access the admin dashboard, where they can create, update, and delete quizzes.
+-   **Configuration:** The **<span style="color:#ff3131">config/auth.php</span>** file is set up with an **<span style="color:#ff3131">admin</span>** guard, using the **<span style="color:#ff3131">admin's</span>** table for authentication.
+
+### Student Guard:
+
+-   **Role:** Takes quizzes and views their scores.
+-   **Access:** Students can log in to access quizzes assigned to them and submit their answers.
+-   **Configuration:** The **<span style="color:#ff3131">config/auth.php</span>** file includes a **<span style="color:#ff3131">student</span>** guard, using the **<span style="color:#ff3131">student’s</span>** table for authentication.
+
+## 7- Features
+
+### Admin Features:
+
+-   **Create, Read, Update, and Delete (CRUD) Operations:**
+    -   **Manage quizzes:** Admins can add, edit, and remove quizzes.
+    -   **Manage questions:** Admins can add questions to quizzes, set answer choices, and specify the correct answer.
+-   **View Student Results:** Monitor student scores and quiz completion statuses.
+
+### Student Features:
+
+-   **Participate in Quizzes:** Students can take quizzes assigned to them.
+-   **View Scores:** Students can see their results for each quiz.
+
+### Quiz Page:
+
+The quiz page in **<span style="color:#ff3131">Quizzes</span> Light** is designed to provide a seamless and engaging user experience while maintaining functionality and reliability. Key features include:
+
+-   **User-Friendly Interface:** The quiz page boasts a clean and intuitive layout that ensures ease of use. Each question is displayed prominently with clearly defined answer options, making it accessible to users of all levels.
+-   **Integrated Timer:** A dynamic timer is embedded on the quiz page to track the remaining time for the quiz. The timer ensures users stay aware of their time limits.
+-   **Time Warning Alert:** When the quiz timer reaches the last minute, it changes color to red, visually alerting the user that they are running out of time. This feature helps maintain focus and urgency.
+-   **Auto-Submit Functionality:** If the timer runs out, the quiz page automatically submits the user's answers. This ensures that all completed work is captured, even if the user is unable to submit manually.
+-   **Responsive Design:** The page is fully responsive, ensuring a consistent experience across devices of all sizes, from desktops to mobile phones.
+
+### Auto correcting:
+
+-   **<span style="color:#ff3131">Quizzes</span> Light** features a **secure auto-correcting system implemented in the <span style="color:#ff3131">back-end logic</span>**, ensuring accurate result evaluation while adhering to security best practices by avoiding client-side processing.
+
+## 8- Database Schema
+
+The application uses two main tables for authentication and other tables for quiz management:
+
+-   **Admins Table:** Stores admin details for authentication.
+-   **Students Table:** Stores student details for authentication.
+-   **Quizzes Table:** Contains information about each quiz (e.g., name, time, questions).
+-   **Specializations Table:** Stores all the available specializations for quizzes.
+
+<div style="text-align:center; border-radius:10px">
+<img src="./public/Imgs/ERD.png" alt="ERD Image" />
+</div>
+
+## 9- Tutorial Video
+
+Explore the seamless user experience of **<span style="color:#ff3131">Quizzes</span> Light** in this tutorial video. It highlights the **application's clean and intuitive design**, showcasing its **responsive layout** that adapts flawlessly across devices. The video also demonstrates core functionalities, including **quiz creation, real-time auto-correction, and student performance tracking**. See how every detail is optimized for efficiency, usability, and a secure user environment.
+
+<video controls autoplay>
+<source src="./public/Video/Quizzes Light Demo Video.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
+## 10- Assets
+
+-   [Quizzes Light Presentation](https://www.canva.com/design/DAGTz0vzHB0/XhTkaWoBonUuTzqjxw2guA/edit?utm_content=DAGTz0vzHB0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+-   [Quizzes Light Presentation Template](https://www.canva.com/templates/EAFwaFanZ_U-blue-doodle-project-presentation/)
+-   [Quizzes Light Logo](https://www.canva.com/design/DAGTNervj3w/GQbVxCm35YZSiHZERe3pnw/edit)
+-   [Quizzes Light Logo Template](https://www.canva.com/templates/EAGRlLGQdHo-green-and-orange-owl-education-logo/)
+-   [Quizzes Light Promotion Video](https://youtu.be/IMxJYg1Rl90)
+-   [Quizzes Light Promotion Video Template](https://www.flexclip.com/template/bd8e8758-blue-digital-website-new-features-announcement-tech-phone-computer-business-slideshow/?ratio=1.775)
+-   [Quizzes Light Tutorial Video On YouTube](https://youtu.be/Fl7HAK1M_2Q)
+-   [Quizzes Light Design Inspired by (ClassMaker.com)](https://www.classmarker.com/)
+
+## 11- Copy Rights
+
+This project was proudly created by the **<span style="color:#ff3131">Quizzes</span> Light** team, combining creativity, dedication, and expertise. Users are welcome to use and customize the code to suit their needs, but we kindly request proper attribution to honor the team’s efforts. Please do not claim ownership of the original work, as it reflects the hard work and collaboration of our talented developers.
+
+&#169; 2024 **<span style="color:#ff3131">Quizzes</span> Light**. All rights reserved.

@@ -16,8 +16,7 @@
     <x-header></x-header>
     <x-nav-bar></x-nav-bar>
     <div class="documentation">
-        <a href="{{ url('https://docs.google.com/document/d/1DiLRE-qf7bv_lu-M25cl8ur0fW6MDoPIs3mEtzr0j5Q/edit?usp=sharing') }}"
-            target="_blank">documentation</a>
+        <a href="{{ url('https://github.com/Ammoor/Quizzes-Light') }}" target="_blank">documentation</a>
     </div>
     <main>
         {{ $pageContent }}
