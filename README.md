@@ -130,10 +130,7 @@ The application uses two main tables for authentication and other tables for qui
 
 Explore the seamless user experience of **<span style="color:#ff3131">Quizzes</span> Light** in this tutorial video. It highlights the **application's clean and intuitive design**, showcasing its **responsive layout** that adapts flawlessly across devices. The video also demonstrates core functionalities, including **quiz creation, real-time auto-correction, and student performance tracking**. See how every detail is optimized for efficiency, usability, and a secure user environment.
 
-<video controls autoplay>
-<source src="./public/Video/Quizzes Light Demo Video.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
+-   [Quizzes Light Tutorial Video On YouTube](https://youtu.be/Fl7HAK1M_2Q)
 
 ## 10- Assets
 
@@ -143,7 +140,6 @@ Explore the seamless user experience of **<span style="color:#ff3131">Quizzes</s
 -   [Quizzes Light Logo Template](https://www.canva.com/templates/EAGRlLGQdHo-green-and-orange-owl-education-logo/)
 -   [Quizzes Light Promotion Video](https://youtu.be/IMxJYg1Rl90)
 -   [Quizzes Light Promotion Video Template](https://www.flexclip.com/template/bd8e8758-blue-digital-website-new-features-announcement-tech-phone-computer-business-slideshow/?ratio=1.775)
--   [Quizzes Light Tutorial Video On YouTube](https://youtu.be/Fl7HAK1M_2Q)
 -   [Quizzes Light Design Inspired by (ClassMaker.com)](https://www.classmarker.com/)
 
 ## 11- Copy Rights
