@@ -4,7 +4,7 @@
 
 ## 1. Introduction
 
-The **<span style="color:#ff3131">Quizzes</span> Light** Platform is a <span style="color:#ff3131">**Laravel-based**</span> application that allows admins to create and manage quizzes, while students can participate in the quizzes. The platform is built with two distinct guards for authentication: admin and student. Each guard has different roles and permissions within the system.
+The **<span style="color:#ff3131">Quizzes</span> Light** Platform is a <span style="color:#ff3131">**Laravel-based**</span> application designed using the **<span style="color:#ff3131">MVC architecture</span>** that allows admins to create and manage quizzes, while students can participate in them. The platform is built with two distinct guards for authentication: admin and student. Each role has its own specific permissions and responsibilities within the system.
 
 ## 2. Used Technologies
 
@@ -26,7 +26,7 @@ The **<span style="color:#ff3131">Quizzes</span> Light** Platform is a <span sty
 Before running the application, ensure you have the following installed:
 
 -   PHP 8.2 or higher
--   PHP Composer
+-   PHP package manager (Composer)
 -   Laravel 11.x
 -   MySQL or phpMyAdmin DataBase
 -   Web Server (ex: Apache, Tomcat, Nginx)
@@ -61,6 +61,10 @@ php artisan migrate --seed
 ```
 
 5- Start the development server: (If you do not make a [virtual host](https://httpd.apache.org/docs/2.4/vhosts/))
+
+```Bash
+php artisan serve
+```
 
 ## 5- Configuration
 
@@ -141,9 +145,10 @@ Explore the seamless user experience of **<span style="color:#ff3131">Quizzes</s
 -   [Quizzes Light Promotion Video](https://youtu.be/IMxJYg1Rl90)
 -   [Quizzes Light Promotion Video Template](https://www.flexclip.com/template/bd8e8758-blue-digital-website-new-features-announcement-tech-phone-computer-business-slideshow/?ratio=1.775)
 -   [Quizzes Light Design Inspired by (ClassMaker.com)](https://www.classmarker.com/)
+-   [Mobile Simulator & Responsive Mockup Testing Tool](https://chromewebstore.google.com/detail/mobile-simulator-responsi/ckejmhbmlajgoklhgbapkiccekfoccmk)
 
-## 11- Copy Rights
+## 11- Copyrights
 
-This project was proudly created by the **<span style="color:#ff3131">Quizzes</span> Light** team, combining creativity, dedication, and expertise. Users are welcome to use and customize the code to suit their needs, but we kindly request proper attribution to honor the team’s efforts. Please do not claim ownership of the original work, as it reflects the hard work and collaboration of our talented developers.
+This project was proudly created by the **<span style="color:#ff3131">Quizzes</span> Light** team, combining creativity, dedication, and expertise. Users are more welcome to use and customize the code to suit their needs, but we kindly request proper attribution to honor the team’s efforts. Please do not claim ownership of the original work, as it reflects the hard work and collaboration of our talented developers.
 
 &#169; 2024 **<span style="color:#ff3131">Quizzes</span> Light**. All rights reserved.
