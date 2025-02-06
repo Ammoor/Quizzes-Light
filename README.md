@@ -1,5 +1,5 @@
-<div style="text-align:center; background-color:white; border-radius:10px" align="center">
-<img src="./public/Imgs/Logo-3.png" alt="Quizzes Light Logo" />
+<div style="text-align:center" align="center">
+<img src="./public/Imgs/Thumbnail.png" alt="Quizzes Light Logo" style="border-radius:10px" />
 </div>
 
 ## 1. Introduction
@@ -119,7 +119,7 @@ The quiz page in **<span style="color:#ff3131">Quizzes</span> Light** is designe
 
 ## 8- Database Schema
 
-The application uses two main tables for authentication and other tables for quiz management:
+The application uses two main tables for authentication: **<span style="color:#ff3131">Admins and Students Tables</span>** and other tables for quiz management:
 
 -   **Admins Table:** Stores admin details for authentication.
 -   **Students Table:** Stores student details for authentication.
