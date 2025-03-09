@@ -136,7 +136,42 @@ Explore the seamless user experience of **<span style="color:#ff3131">Quizzes</s
 
 -   [Quizzes Light Tutorial Video On YouTube](https://youtu.be/Fl7HAK1M_2Q)
 
-## 10- Assets
+## 10- Live Preview
+
+Experience **<span style="color:#ff3131">Quizzes</span> Light** in action with this live preview! This deployment showcases the platform’s streamlined quiz management and engaging user interface. You can navigate through the platform, test its features, and see how it handles quiz creation, participation, and results tracking.
+
+### Important Notes:
+
+-   The application is hosted on [Laravel Cloud](https://cloud.laravel.com/) with **<span style="color:#ff3131">limited resources</span>** for preview purposes.
+-   If the application has been inactive, it may just take a few seconds to respond due to **<span style="color:#ff3131">server hibernation</span>**.
+-   To get started with [Laravel Cloud](https://cloud.laravel.com/) you can watch this [short video](https://www.youtube.com/watch?v=cXVVoaekqT8).
+
+### Check it out live now!
+
+-   [Quizzes Light Live Preview](https://quizzes-light.laravel.cloud/home)
+
+## 11- Bug Reports & Feedback Suggestions
+
+At **<span style="color:#ff3131">Quizzes</span> Light**, we value your feedback and believe that continuous improvement is the key to a better user experience. Whether you’ve found a bug or have an idea to enhance the platform, you are more than welcome and we’d love to hear from you!
+
+### Bug Hunters:
+
+We encourage bug hunters and enthusiasts to practice their skills by testing our platform. If you discover any issues, share them with us in the [Bug Reporting Form](https://forms.gle/sDtcL4o11ALppyEu9) so we can fix them and make **<span style="color:#ff3131">Quizzes</span> Light** even better!
+
+### Feedback & Improvement Suggestions:
+
+If there’s a feature you’d like to see or to improve, share your insights with us in the [Feedback Form](https://forms.gle/C2fT2xnGcdVHyvLv7) and let us know! Your insights help us enhance the platform and create a smoother, more enjoyable experience for everyone.
+
+### Important Notes:
+
+-   ### Bug Reports:
+    -   Please ensure your submission focuses on a **single issue at a time**. This helps us investigate and resolve problems efficiently. If you encounter multiple bugs, kindly submit separate reports for each.
+    -   Clearly describe the issue, provide steps to reproduce it, and include a video for more clarification.
+-   ### Feedback & Improvement Suggestions:
+    -   If you have ideas for improvements, please provide **one suggestion per submission**. This ensures that each request is properly reviewed and considered.
+    -   Share your ideas along with **examples or references** to help us understand how we can improve **<span style="color:#ff3131">Quizzes</span> Light**.
+
+## 12- Assets
 
 -   [Quizzes Light Presentation](https://www.canva.com/design/DAGTz0vzHB0/XhTkaWoBonUuTzqjxw2guA/edit?utm_content=DAGTz0vzHB0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 -   [Quizzes Light Presentation Template](https://www.canva.com/templates/EAFwaFanZ_U-blue-doodle-project-presentation/)
@@ -147,8 +182,8 @@ Explore the seamless user experience of **<span style="color:#ff3131">Quizzes</s
 -   [Quizzes Light Design Inspired by (ClassMaker.com)](https://www.classmarker.com/)
 -   [Mobile Simulator & Responsive Mockup Testing Tool](https://chromewebstore.google.com/detail/mobile-simulator-responsi/ckejmhbmlajgoklhgbapkiccekfoccmk)
 
-## 11- Copyrights
+## 13- Copyrights
 
-This project was proudly created by the **<span style="color:#ff3131">Quizzes</span> Light** team, combining creativity, dedication, and expertise. Users are more welcome to use and customize the code to suit their needs, but we kindly request proper attribution to honor the team’s efforts. Please do not claim ownership of the original work, as it reflects the hard work and collaboration of our talented developers.
+This project was proudly created by the **<span style="color:#ff3131">Quizzes</span> Light** team, combining creativity, dedication, and expertise. Users are more than welcome to use and customize the code to suit their needs, but we kindly request proper attribution to honor the team’s efforts. Please do not claim ownership of the original work, as it reflects the hard work and collaboration of our talented developers.
 
 &#169; 2024 **<span style="color:#ff3131">Quizzes</span> Light**. All rights reserved.
