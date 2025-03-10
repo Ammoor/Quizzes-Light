@@ -31,7 +31,7 @@
             </div>
             <div class="promo-video">
                 <video controls autoplay muted>
-                    <source src="{{ asset('Video/Quizzes Light promo video.mp4') }}" type="video/mp4">
+                    <source src="{{ Storage::disk('promo_video')->url('videos/promo_video.mp4') }}" type="video/mp4">
                     Your browser does not support video tag.
                 </video>
             </div>
