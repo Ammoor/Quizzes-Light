@@ -158,6 +158,20 @@
         </div>
     </x-slot:pageContent>
     <x-slot:javaScript>
-        <script src="{{ asset('JavaScript/about-us.js') }}"></script>
+        <script>
+            const elements = document.querySelectorAll(".about-us .card");
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animation = "move-card-right 1.5s forwards";
+                    } else {
+                        entry.target.style.animation = "move-card-left 1.5s forwards";
+                    }
+                });
+            });
+            elements.forEach((element) => {
+                observer.observe(element);
+            });
+        </script>
     </x-slot:javaScript>
 </x-page-layout>
