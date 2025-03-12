@@ -23,6 +23,8 @@
         <button><i class="fa-solid fa-arrow-up"></i></button>
     </div>
     {{ $javaScript }}
+    <script src="{{ asset('./JavaScript/scroll-top-button.js') }}"></script>
+    <script src="{{ asset('./JavaScript/toggle-admin-sidebar.js') }}"></script>
 </body>
 
 </html>

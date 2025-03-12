@@ -26,6 +26,7 @@
     </div>
     <x-footer></x-footer>
     {{ $javaScript }}
+    <script src="{{ asset('./JavaScript/scroll-top-button.js') }}"></script>
 </body>
 
 </html>

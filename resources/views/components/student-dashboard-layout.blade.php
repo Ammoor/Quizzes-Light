@@ -19,6 +19,7 @@
         {{ $pageContent }}
     </main>
     {{ $javaScript }}
+    <script src="{{ asset('./JavaScript/scroll-top-button.js') }}"></script>
 </body>
 
 </html>

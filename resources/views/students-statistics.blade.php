@@ -53,6 +53,5 @@
         @endif
     </x-slot:pageContent>
     <x-slot:javaScript>
-        <script src="{{ asset('JavaScript/students-statistics.js') }}"></script>
     </x-slot:javaScript>
 </x-admin-dashboard-layout>

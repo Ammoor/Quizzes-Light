@@ -51,6 +51,5 @@
         @endif
     </x-slot:pageContent>
     <x-slot:javaScript>
-        <script src="{{ asset('JavaScript/admin-tests.js') }}"></script>
     </x-slot:javaScript>
 </x-admin-dashboard-layout>

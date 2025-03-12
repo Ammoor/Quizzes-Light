@@ -30,6 +30,5 @@
         </div>
     </x-slot:pageContent>
     <x-slot:javaScript>
-        <script src=""></script>
     </x-slot:javaScript>
 </x-admin-dashboard-layout>

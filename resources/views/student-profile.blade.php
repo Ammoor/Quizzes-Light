@@ -34,6 +34,5 @@
         </div>
     </x-slot:pageContent>
     <x-slot:javaScript>
-        <script src=""></script>
     </x-slot:javaScript>
 </x-student-dashboard-layout>

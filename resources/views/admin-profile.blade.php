@@ -34,6 +34,5 @@
         </div>
     </x-slot:pageContent>
     <x-slot:javaScript>
-        <script src="{{ asset('JavaScript/admin-profile.js') }}"></script>
     </x-slot:javaScript>
 </x-admin-dashboard-layout>
