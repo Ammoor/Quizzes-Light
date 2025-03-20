@@ -57,11 +57,11 @@
                     {{-- Audio Sound Effects --}}
                     <div class="sound-effects-container">
                         <audio id="show-password-audio">
-                            <source src="{{ asset('Audio/show-password.mp3') }}">
+                            <source src="{{ asset('Audio/show-password.mp3') }}" type="audio/mpeg">
                             Your browser does not support Audio tag.
                         </audio>
                         <audio id="hide-password-audio">
-                            <source src="{{ asset('Audio/hide-password.mp3') }}">
+                            <source src="{{ asset('Audio/hide-password.mp3') }}" type="audio/mpeg">
                             Your browser does not support Audio tag.
                         </audio>
                     </div>
