@@ -179,7 +179,10 @@ nav a:hover {
 .form-container .form form label span {
     color: red;
 }
-.form-container .form form :where(input[type="password"], input[type="email"]) {
+.form-container
+    .form
+    form
+    :where(input[type="password"], input[type="email"], input[type="text"]) {
     transition: var(--main-transition);
     font-size: 1.5rem;
     width: 100%;
@@ -189,8 +192,34 @@ nav a:hover {
 .form-container
     .form
     form
-    :where(input[type="password"], input[type="email"]):focus-visible {
+    :where(
+        input[type="password"],
+        input[type="email"],
+        input[type="text"]
+    ):focus-visible {
     outline-color: var(--main-color-3);
+}
+.form-container .form form .password-container {
+    position: relative;
+}
+.form-container .form form button {
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 1.5rem;
+    top: 4rem;
+    font-size: 2rem;
+    border-radius: 50%;
+    padding: 1rem;
+    transition: 0.3s;
+}
+.form-container .form form button.hide {
+    background-color: var(--main-color-2);
+    color: var(--main-color-1);
+}
+.form-container .form form button.show {
+    background-color: var(--main-color-3);
+    color: var(--main-color-1);
 }
 .checkbox-container {
     display: flex;

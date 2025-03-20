@@ -21,25 +21,50 @@
                 <form action="{{ route('registration-page-admin') }}" method="POST">
                     @csrf
                     {{-- First Name --}}
-                    <label for="first-name">First Name <span>*</span></label>
-                    <input id="first-name" type="text" name="first-name" required>
-                    <x-input-error :messages="$errors->get('first-name')" />
+                    <div class="first-name-container">
+                        <label for="first-name">First Name <span>*</span></label>
+                        <input id="first-name" type="text" name="first-name" required>
+                        <x-input-error :messages="$errors->get('first-name')" />
+                    </div>
                     {{-- Last Name --}}
-                    <label for="last-name">Last Name <span>*</span></label>
-                    <input id="last-name" type="text" name="last-name" required>
-                    <x-input-error :messages="$errors->get('last-name')" />
+                    <div class="last-name-container">
+                        <label for="last-name">Last Name <span>*</span></label>
+                        <input id="last-name" type="text" name="last-name" required>
+                        <x-input-error :messages="$errors->get('last-name')" />
+                    </div>
                     {{-- E-mail --}}
-                    <label for="email">E-mail <span>*</span></label>
-                    <input id="email" type="email" name="email" required>
-                    <x-input-error :messages="$errors->get('email')" />
+                    <div class="email-container">
+                        <label for="email">E-mail <span>*</span></label>
+                        <input id="email" type="email" name="email" required>
+                        <x-input-error :messages="$errors->get('email')" />
+                    </div>
                     {{-- Password --}}
-                    <label for="password">Password <span>*</span></label>
-                    <input id="password" type="password" name="password" required>
-                    <x-input-error :messages="$errors->get('password')" />
+                    <div class="password-container">
+                        <label for="password">Password <span>*</span></label>
+                        <input id="password" type="password" name="password" required>
+                        <button onclick="passwordVisibility()" class="hide" type="button"><i
+                                class="fa-regular fa-eye-slash"></i></button>
+                        <x-input-error :messages="$errors->get('password')" />
+                    </div>
                     {{-- Confirm Password  --}}
-                    <label for="password_confirmation">Confirm Password <span>*</span></label>
-                    <input id="password_confirmation" type="password" name="password_confirmation" required>
-                    <x-input-error :messages="$errors->get('password_confirmation')" />
+                    <div class="confirm-password-container">
+                        <label for="password_confirmation">Confirm Password <span>*</span></label>
+                        <input id="password_confirmation" type="password" name="password_confirmation" required>
+                        <button onclick="confirmPasswordVisibility()" class="hide" type="button"><i
+                                class="fa-regular fa-eye-slash"></i></button>
+                        <x-input-error :messages="$errors->get('password_confirmation')" />
+                    </div>
+                    {{-- Audio Sound Effects --}}
+                    <div class="sound-effects-container">
+                        <audio id="show-password-audio">
+                            <source src="{{ asset('Audio/show-password.mp3') }}">
+                            Your browser does not support Audio tag.
+                        </audio>
+                        <audio id="hide-password-audio">
+                            <source src="{{ asset('Audio/hide-password.mp3') }}">
+                            Your browser does not support Audio tag.
+                        </audio>
+                    </div>
                     {{-- Check Box --}}
                     <div class="checkbox-container">
                         {{-- © CSS Scan, #30 by Saeed Alipoor --}}
@@ -67,5 +92,6 @@
         </div>
     </x-slot:pageContent>
     <x-slot:javaScript>
+        <script src="{{ asset('JavaScript/password-visibility.js') }}"></script>
     </x-slot:javaScript>
 </x-page-layout>

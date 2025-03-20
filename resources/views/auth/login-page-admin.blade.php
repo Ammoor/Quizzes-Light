@@ -21,13 +21,30 @@
                 <form action="{{ route('login-admin') }}" method="POST">
                     @csrf
                     {{-- E-mail --}}
-                    <label for="email">E-mail <span>*</span></label>
-                    <input id="email" type="email" name="email" required>
-                    <x-input-error :messages="$errors->get('email')" />
+                    <div class="email-container">
+                        <label for="email">E-mail <span>*</span></label>
+                        <input id="email" type="email" name="email" required>
+                        <x-input-error :messages="$errors->get('email')" />
+                    </div>
                     {{-- Password --}}
-                    <label for="password">Password <span>*</span></label>
-                    <input id="password" type="password" name="password" required>
-                    <x-input-error :messages="$errors->get('password')" />
+                    <div class="password-container">
+                        <label for="password">Password <span>*</span></label>
+                        <input id="password" type="password" name="password" required>
+                        <button onclick="passwordVisibility()" class="hide" type="button"><i
+                                class="fa-regular fa-eye-slash"></i></button>
+                        <x-input-error :messages="$errors->get('password')" />
+                    </div>
+                    {{-- Audio Sound Effects --}}
+                    <div class="sound-effects-container">
+                        <audio id="show-password-audio">
+                            <source src="{{ asset('Audio/show-password.mp3') }}">
+                            Your browser does not support Audio tag.
+                        </audio>
+                        <audio id="hide-password-audio">
+                            <source src="{{ asset('Audio/hide-password.mp3') }}">
+                            Your browser does not support Audio tag.
+                        </audio>
+                    </div>
                     {{-- Check Box --}}
                     <div class="checkbox-container">
                         {{-- © CSS Scan, #30 by Saeed Alipoor --}}
@@ -54,5 +71,6 @@
         </div>
     </x-slot:pageContent>
     <x-slot:javaScript>
+        <script src="{{ asset('JavaScript/password-visibility.js') }}"></script>
     </x-slot:javaScript>
 </x-page-layout>
