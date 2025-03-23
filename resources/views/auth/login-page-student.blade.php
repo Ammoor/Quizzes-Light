@@ -65,7 +65,9 @@
                         {{-- © CSS Scan, #30 by Saeed Alipoor --}}
                         <label for="checkbox">Remember me</label>
                     </div>
-                    <input type="submit" value="Log in ">
+                    <a href="{{ url('registration-page-student') }}">New to Quizzes Light? <span>Create your new account
+                            now!</span></a>
+                    <input type="submit" value="Log in">
                 </form>
             </div>
         </div>

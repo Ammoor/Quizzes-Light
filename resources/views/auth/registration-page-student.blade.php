@@ -86,7 +86,8 @@
                         <label for="checkbox">I agree with the Quizzes Light.com <span>Terms</span> and <span>Privacy
                                 Policy</span>.</label>
                     </div>
-                    <input type="submit" value="Register ">
+                    <a href="{{ url('login-page-student') }}">Already Have an Account? <span>Log in!</span></a>
+                    <input type="submit" value="Register">
                 </form>
             </div>
         </div>

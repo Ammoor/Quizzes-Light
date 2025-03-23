@@ -86,7 +86,7 @@
                         <label for="checkbox">I agree with the Quizzes Light.com <span>Terms</span> and <span>Privacy
                                 Policy</span>.</label>
                     </div>
-                    <input type="submit" value="Register ">
+                    <input type="submit" value="Register">
                 </form>
             </div>
         </div>

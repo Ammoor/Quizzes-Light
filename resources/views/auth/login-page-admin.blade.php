@@ -65,7 +65,7 @@
                         {{-- © CSS Scan, #30 by Saeed Alipoor --}}
                         <label for="checkbox">Remember me</label>
                     </div>
-                    <input type="submit" value="Log in ">
+                    <input type="submit" value="Log in">
                 </form>
             </div>
         </div>
