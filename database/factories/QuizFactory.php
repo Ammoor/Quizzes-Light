@@ -33,7 +33,6 @@ class QuizFactory extends Factory
         }
         return [
             'name' => 'Quiz ' . $this->faker->unique()->numberBetween(50, 100),
-            'specialization_id' => $this->faker->numberBetween(1, 7), // 7 specializations
             'time' => $this->faker->numberBetween(5, 20), // Duration in minutes
             'time_slot' => $this->faker->numberBetween(5, 60), // Duration in minutes
             'questions' => json_encode($questions),

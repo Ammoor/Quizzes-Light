@@ -11,11 +11,6 @@ use Faker\Factory as Faker;
 
 class FetchFromDataBase extends Controller
 {
-    public function specializationData()
-    {
-        $specializationData = Specialization::all();
-        return view('generate-quiz', compact('specializationData'));
-    }
     public function adminQuizzesData()
     {
         $adminQuizzes = json_decode(Auth::user()->quizzes);
