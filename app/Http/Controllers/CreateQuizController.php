@@ -2,16 +2,35 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Specialization;
 use App\Models\Administrator;
-use App\Models\Student;
 use App\Models\Quiz;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
-use Faker\Factory as Faker;
 
 class CreateQuizController extends Controller
 {
+    public function createQuiz(Request $request)
+    {
+        $request->validate([
+            "quiz-name" => 'required',
+        ]);
+        $newQuiz = Quiz::create([
+            'name' => $request->input("quiz-name"),
+            // Default Values.
+            'time' => -1,
+            'time_slot' => -1,
+            'questions' => json_encode([]),
+            'answers' => json_encode([]),
+            'grades' => json_encode([]),
+        ]);
+        // Add the new quiz to admin's record.
+        $adminRecord = Administrator::where('id', Auth::user()->id)->first();
+        $adminQuizzes = json_decode($adminRecord->quizzes);
+        $adminQuizzes[] = ['quiz_id' => $newQuiz->id];
+        $adminRecord->update(['quizzes' => json_encode($adminQuizzes)]);
+        return redirect("quiz-dashboard/{$newQuiz->id}")->with(['createMessage' => true]);
+    }
+    /*
     public function store(Request $request)
     {
         // Validate the quiz data.
@@ -21,17 +40,8 @@ class CreateQuizController extends Controller
             'quiz-time' => 'required',
             'time-slot' => 'required'
         ]);
-        // Generate random questions and their answers.
-        for ($i = 1; $i <= $request->input('questions-number'); $i++) {
-            $questions[] = [
-                'id' => $i,
-                'question_text' => Faker::create()->sentence,
-            ];
-            $answers[] = [
-                'question_id' => $i,
-                'answer_text' => 'The right answer',
-            ];
-        }
+        $questions = null;
+        $answers = null;
         // Make a new quiz record.
         $quizData = Quiz::create([
             'name' => 'Quiz ' . Quiz::count() + 1,
@@ -54,4 +64,5 @@ class CreateQuizController extends Controller
         }
         return redirect("quiz-generated/$quizData->id")->with(['createMessage' => true]);
     }
+    */
 }

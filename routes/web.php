@@ -61,15 +61,19 @@ Route::middleware('auth:administrator')->group(function () {
         return view("admin-profile");
     })->name('admin-profile');
 
-    Route::get('/generate-quiz', [FetchFromDataBase::class, 'specializationData']);
+    Route::get('/generate-quiz', function () {
+        return view("generate-quiz");
+    });
 
-    Route::post('generate-quiz', [CreateQuizController::class, 'store'])->name('generate-quiz');
+    Route::post('generate-quiz', [CreateQuizController::class, 'createQuiz'])->name('generate-quiz');
 
-    Route::get('/quiz-generated/{quizID}', [ViewGeneratedQuizController::class, 'view'])->name('quiz-generated');
+    Route::get('/quiz-dashboard/{quizID}', [ViewGeneratedQuizController::class, 'viewQuizDashboard'])->name('quiz-dashboard');
+
+    Route::get('add-questions/{quizID}', [ViewGeneratedQuizController::class, 'viewAddQuestionsDashboard']);
 
     Route::post('delete-quiz', [DeleteQuizController::class, 'delete'])->name('delete-quiz');
 
-    Route::post('update-quiz', [UpdateQuizController::class, 'update'])->name('update-quiz');
+    Route::post('update-quiz-name', [UpdateQuizController::class, 'updateName'])->name('update-quiz-name');
 
     Route::get('/admin-tests', [FetchFromDataBase::class, 'adminQuizzesData']);
 
