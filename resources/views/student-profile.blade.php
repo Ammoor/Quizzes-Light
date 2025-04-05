@@ -32,7 +32,34 @@
                 <p>{{ Auth::user()->email }}</p>
             </div>
         </div>
+        <div class="delete-user-form">
+            <form action="{{ route('delete-current-student') }}" method="POST">
+                @csrf
+                <h2>Danger zone <span><i class="fa-solid fa-triangle-exclamation"></i></span></h2>
+                <div class="danger-zone">
+                    <h2>Delete My Account Permanently</h2>
+                    <span>Quick reminder</span>
+                    <div class="inform-message">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        <p>Deleting your account will permanently remove your profile, quiz results, and all associated
+                            activity. You will no longer be able to access your dashboard or view your previous scores.
+                            This action cannot be undone.
+                        </p>
+                    </div>
+                    <button type="button" onclick="deleteUser()">Delete</button>
+                </div>
+            </form>
+        </div>
     </x-slot:pageContent>
     <x-slot:javaScript>
+        <script>
+            function deleteUser() {
+                if (confirm(
+                        'Are you sure? This will permanently delete your account and all your quiz results. This action cannot be undone.'
+                    )) {
+                    document.querySelector("main .delete-user-form form").submit();
+                }
+            }
+        </script>
     </x-slot:javaScript>
 </x-student-dashboard-layout>

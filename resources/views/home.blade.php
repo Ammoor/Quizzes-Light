@@ -9,6 +9,13 @@
         <link rel="stylesheet" href="{{ asset('CSS/home.css') }}">
     </x-slot:styleSheet>
     <x-slot:pageContent>
+        @if (session('deleteMessage'))
+            {{-- Start Of Account Deleted Confirmation Message --}}
+            <div class="account-delete-confirm">
+                <p>Your account has been deleted successfully! <span><i class="fa-solid fa-check"></i></span></p>
+                <div class="delete-message-bar"></div>
+            </div>
+        @endif
         <!-- Start Of Promo Video Section -->
         <div class="promo-video-section">
             <div class="promo-video-text">
@@ -139,5 +146,8 @@
         </div>
     </x-slot:pageContent>
     <x-slot:javaScript>
+        @if (session('deleteMessage'))
+            <script src="{{ asset('JavaScript/delete-account-confirm-message.js') }}"></script>
+        @endif
     </x-slot:javaScript>
 </x-page-layout>

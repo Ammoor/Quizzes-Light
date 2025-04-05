@@ -237,6 +237,7 @@ main h2 {
 .details-section {
     background-color: #dddddd;
     padding: 5rem;
+    margin-bottom: 10rem;
     border-radius: 0.5rem;
 }
 .details-section .info {
@@ -262,6 +263,64 @@ main h2 {
     font-weight: 400;
     display: inline-flex;
     align-items: end;
+}
+/* Start Of Danger Zone Section */
+.delete-user-form form > h2 {
+    color: #fa5e55;
+    background-color: #212830;
+    font-size: 2.5rem;
+    padding: 2rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    width: fit-content;
+}
+.delete-user-form form > h2 span {
+    color: yellow;
+}
+.delete-user-form form .danger-zone {
+    color: #fa5e55;
+    background-color: #212830;
+    border: 0.4rem solid #fa5e55;
+    border-radius: 0.5rem;
+    padding: 5rem;
+}
+.delete-user-form form .danger-zone h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+.delete-user-form form .danger-zone > span {
+    display: inline-block;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    padding: 1rem;
+    color: #212830;
+    background-color: #fa5e55;
+}
+.delete-user-form form .danger-zone .inform-message {
+    border: 0.2rem solid #fa5e55;
+    display: flex;
+    gap: 2rem;
+    padding: 1.5rem;
+    margin-bottom: 3rem;
+}
+.delete-user-form form .danger-zone .inform-message i {
+    font-size: 2.5rem;
+}
+.delete-user-form form .danger-zone .inform-message p {
+    font-size: 1.5rem;
+}
+.delete-user-form form .danger-zone button {
+    color: var(--main-color-1);
+    background-color: #0d1117;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    padding: 2rem 3rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.delete-user-form form .danger-zone button:hover {
+    background-color: #fa5e55;
 }
 /* Start of Scroll Up Button */
 .scroll-up-button {

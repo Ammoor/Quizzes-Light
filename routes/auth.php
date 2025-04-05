@@ -12,6 +12,7 @@ use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\RegisteredAdministratorController;
 use App\Http\Controllers\Auth\RegisteredStudentController;
+use App\Http\Controllers\Auth\DeleteUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
 use Illuminate\Support\Facades\Route;
 
@@ -75,9 +76,13 @@ Route::middleware('auth')->group(function () {
 
     Route::post('logout', [AuthenticatedSessionController::class, 'destroy'])
         ->name('logout');
+
+    Route::post('delete-current-student', [DeleteUserController::class, 'deleteCurrentStudent'])->name('delete-current-student');
 });
 
 Route::middleware('auth:administrator')->group(function () {
     Route::post('logout-admin', [AuthenticatedSessionAdministratorController::class, 'destroy'])
         ->name('logout-admin');
+
+    Route::post('delete-current-admin', [DeleteUserController::class, 'deleteCurrentAdmin'])->name('delete-current-admin');
 });
