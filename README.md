@@ -146,7 +146,7 @@ Experience **<span style="color:#ff3131">Quizzes</span> Light** in action with t
 
 -   The application is hosted on [Laravel Cloud](https://cloud.laravel.com/) with **<span style="color:#ff3131">limited resources</span>** for preview purposes.
 -   If the application has been inactive, it may just take a few seconds to respond due to **<span style="color:#ff3131">server hibernation</span>**.
--   Sometimes, styles may not appear as expected in the live preview of **<span style="color:#ff3131">Quizzes</span> Light** on [Laravel Cloud](https://cloud.laravel.com/). This is usually due to **<span style="color:#ff3131">browser caching</span>**. To fix it, try using a different browser or just press **```Ctrl + Shift + R```** to perform a hard refresh and clear the cache.
+-   Sometimes, styles may not appear as expected. This is usually due to **<span style="color:#ff3131">browser caching</span>**. To fix it, try using a different browser or just press **`Ctrl + Shift + R`** to perform a hard refresh and clear the cache.
 -   To get started with [Laravel Cloud](https://cloud.laravel.com/) you can watch this [short video](https://www.youtube.com/watch?v=cXVVoaekqT8).
 
 ### Check it out live now!
