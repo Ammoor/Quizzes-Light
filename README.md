@@ -18,7 +18,7 @@ The **<span style="color:#ff3131">Quizzes</span> Light** Platform is a <span sty
 ### Back-End:
 
 -   PHP
--   MySQL
+-   MySQL/phpMyAdmin
 -   Laravel
 
 ## 3. Prerequisites
@@ -27,7 +27,7 @@ Before running the application, ensure you have the following installed:
 
 -   PHP 8.2 or higher
 -   PHP package manager (Composer)
--   Laravel 11.x
+-   Laravel 12.x
 -   MySQL or phpMyAdmin DataBase
 -   Web Server (ex: Apache, Tomcat, Nginx)
 -   All in one solutions (ex: XAMPP, Laragon, Laravel Herd)
@@ -41,7 +41,7 @@ To set up the project, follow these steps:
 
 ```Bash
 git clone <repository-url>
-Cd Quizzes-Light
+cd Quizzes-Light
 ```
 
 2- Install dependencies:
@@ -71,7 +71,7 @@ php artisan serve
 The **<span style="color:#ff3131">.env</span>** file should be configured with the following:
 
 -   **APP_URL:** The URL where your app will be hosted.
--   **DB_CONNECTION, DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME, DB_PASSWORD: Database configuration.**
+-   **Database configuration:** DB_CONNECTION, DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME, DB_PASSWORD.
 
 ## 6- User Authentication
 
@@ -109,7 +109,7 @@ The quiz page in **<span style="color:#ff3131">Quizzes</span> Light** is designe
 
 -   **User-Friendly Interface:** The quiz page boasts a clean and intuitive layout that ensures ease of use. Each question is displayed prominently with clearly defined answer options, making it accessible to users of all levels.
 -   **Integrated Timer:** A dynamic timer is embedded on the quiz page to track the remaining time for the quiz. The timer ensures users stay aware of their time limits.
--   **Time Warning Alert:** When the quiz timer reaches the last minute, it changes color to red, visually alerting the user that they are running out of time. This feature helps maintain focus and urgency.
+-   **Time Warning Alert:** When the quiz timer reaches the last minute, it **<span style="color:#ff3131">changes color to red</span>**, visually alerting the user that they are running out of time. This feature helps maintain focus and urgency.
 -   **Auto-Submit Functionality:** If the timer runs out, the quiz page automatically submits the user's answers. This ensures that all completed work is captured, even if the user is unable to submit manually.
 -   **Responsive Design:** The page is fully responsive, ensuring a consistent experience across devices of all sizes, from desktops to mobile phones.
 
@@ -134,6 +134,8 @@ The application uses two main tables for authentication: **<span style="color:#f
 
 Explore the seamless user experience of **<span style="color:#ff3131">Quizzes</span> Light** in this tutorial video. It highlights the **application's clean and intuitive design**, showcasing its **responsive layout** that adapts flawlessly across devices. The video also demonstrates core functionalities, including **quiz creation, real-time auto-correction, and student performance tracking**. See how every detail is optimized for efficiency, usability, and a secure user environment.
 
+### <span style="color:#ff3131">Quizzes</span> Light on YouTube!
+
 -   [Quizzes Light Tutorial Video On YouTube](https://youtu.be/Fl7HAK1M_2Q)
 
 ## 10- Live Preview
@@ -144,6 +146,7 @@ Experience **<span style="color:#ff3131">Quizzes</span> Light** in action with t
 
 -   The application is hosted on [Laravel Cloud](https://cloud.laravel.com/) with **<span style="color:#ff3131">limited resources</span>** for preview purposes.
 -   If the application has been inactive, it may just take a few seconds to respond due to **<span style="color:#ff3131">server hibernation</span>**.
+-   Sometimes, styles may not appear as expected in the live preview of **<span style="color:#ff3131">Quizzes</span> Light** on [Laravel Cloud](https://cloud.laravel.com/). This is usually due to **<span style="color:#ff3131">browser caching</span>**. To fix it, try using a different browser or just press **```Ctrl + Shift + R```** to perform a hard refresh and clear the cache.
 -   To get started with [Laravel Cloud](https://cloud.laravel.com/) you can watch this [short video](https://www.youtube.com/watch?v=cXVVoaekqT8).
 
 ### Check it out live now!
@@ -177,6 +180,7 @@ If there’s a feature you’d like to see or to improve, share your insights wi
 -   [Quizzes Light Presentation Template](https://www.canva.com/templates/EAFwaFanZ_U-blue-doodle-project-presentation/)
 -   [Quizzes Light Logo](https://www.canva.com/design/DAGTNervj3w/GQbVxCm35YZSiHZERe3pnw/edit)
 -   [Quizzes Light Logo Template](https://www.canva.com/templates/EAGRlLGQdHo-green-and-orange-owl-education-logo/)
+-   [Quizzes Light Thumbnail](https://www.canva.com/design/DAGcKZzQgCA/_Jdc2LlK8cmeCqCu1B6aZw/edit?utm_content=DAGcKZzQgCA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 -   [Quizzes Light Promotion Video](https://youtu.be/IMxJYg1Rl90)
 -   [Quizzes Light Promotion Video Template](https://www.flexclip.com/template/bd8e8758-blue-digital-website-new-features-announcement-tech-phone-computer-business-slideshow/?ratio=1.775)
 -   [Quizzes Light Design Inspired by (ClassMaker.com)](https://www.classmarker.com/)
