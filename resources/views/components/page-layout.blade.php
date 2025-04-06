@@ -26,7 +26,12 @@
     </div>
     <x-footer></x-footer>
     {{ $javaScript }}
-    <script src="{{ asset('./JavaScript/scroll-top-button.js') }}"></script>
+    <script src="{{ asset('JavaScript/scroll-top-button.js') }}"></script>
+    <script>
+        const copyRightsParagraph = document.querySelector("footer p");
+        const currentYear = new Date().getFullYear();
+        copyRightsParagraph.innerHTML = `&copy; ${currentYear} <span>Quizzes</span> Light. All rights reserved.`;
+    </script>
 </body>
 
 </html>

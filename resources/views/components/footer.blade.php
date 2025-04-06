@@ -17,5 +17,6 @@
         <i class="fa-brands fa-github"></i>
         <i class="fa-solid fa-envelope"></i>
     </div>
-    <p>&copy; 2024 <span>Quizzes</span> Light. All rights reserved.</p>
+    {{-- Handled By JS --}}
+    <p></p>
 </footer>
