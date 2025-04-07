@@ -193,6 +193,9 @@ nav a:hover {
     .not-found-container .not-found-image img {
         width: 100%;
     }
+    .not-found-container .not-found-title {
+        top: -4rem;
+    }
 }
 /* Start of Scroll Up Button */
 .scroll-up-button {
