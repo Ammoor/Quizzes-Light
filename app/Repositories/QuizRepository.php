@@ -2,10 +2,9 @@
 
 namespace App\Repositories;
 
-use App\Interfaces\QuizRepositoryInterface;
 use App\Models\Quiz;
 
-class QuizRepository implements QuizRepositoryInterface
+class QuizRepository
 {
     public function createQuiz(array $quizDetails)
     {

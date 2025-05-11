@@ -2,10 +2,9 @@
 
 namespace App\Repositories;
 
-use App\Interfaces\SpecializationRepositoryInterface;
 use App\Models\Specialization;
 
-class SpecializationRepository implements SpecializationRepositoryInterface
+class SpecializationRepository
 {
     public function createSpecialization(array $specializationDetails)
     {
