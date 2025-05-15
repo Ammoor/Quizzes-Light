@@ -147,7 +147,10 @@ Experience **<span style="color:#ff3131">Quizzes</span> Light** in action with t
 -   The application is hosted on [Laravel Cloud](https://cloud.laravel.com/) with **<span style="color:#ff3131">limited resources</span>** for preview purposes.
 -   If the application has been inactive, it may just take a few seconds to respond due to **<span style="color:#ff3131">server hibernation</span>**.
 -   Sometimes, styles may not appear as expected. This is usually due to **<span style="color:#ff3131">browser caching</span>**. To fix it, try using a different browser or just press **`Ctrl + Shift + R`** to perform a hard refresh and clear the cache.
--   To get started with [Laravel Cloud](https://cloud.laravel.com/) you can watch this [short video](https://www.youtube.com/watch?v=cXVVoaekqT8).
+-   To get started with [Laravel Cloud](https://cloud.laravel.com/) you can watch:
+
+    -   [Getting Started with Laravel Cloud](https://www.youtube.com/watch?v=cXVVoaekqT8)
+    -   [5 Tips to Save Money on Laravel Cloud](https://youtu.be/jM7VZRXgYXE)
 
 ### Check it out live now!
 
@@ -190,4 +193,4 @@ If there’s a feature you’d like to see or to improve, share your insights wi
 
 This project was proudly created by the **<span style="color:#ff3131">Quizzes</span> Light** team, combining creativity, dedication, and expertise. Users are more than welcome to use and customize the code to suit their needs, but we kindly request proper attribution to honor the team’s efforts. Please do not claim ownership of the original work, as it reflects the hard work and collaboration of our talented developers.
 
-&#169; 2024 **<span style="color:#ff3131">Quizzes</span> Light**. All rights reserved.
+&#169; 2025 **<span style="color:#ff3131">Quizzes</span> Light**. All rights reserved.
