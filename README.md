@@ -28,10 +28,18 @@ Before running the application, ensure you have the following installed:
 -   PHP 8.2 or higher
 -   PHP package manager (Composer)
 -   Laravel 12.x
--   MySQL or phpMyAdmin DataBase
--   Web Server (ex: Apache, Tomcat, Nginx)
+-   MySQL/phpMyAdmin DataBase
+-   Web server (ex: Apache, Tomcat, Nginx)
+
+OR
+
 -   All in one solutions (ex: XAMPP, Laragon, Laravel Herd)
--   Font Awesome Library
+
+    -   Recommended: Install **<span style="color:#36a5ff">Laragon</span>**
+
+        > For a smooth and hassle-free local development setup, we recommend installing **<span style="color:#36a5ff">Laragon</span>**. It's a powerful all-in-one environment that comes preconfigured with essential tools like PHP, MySQL, Composer, and more. **<span style="color:#36a5ff">Laragon</span>** is lightweight, easy to use, and ideal for running Laravel projects like **<span style="color:#ff3131">Quizzes</span> Light**.
+
+        -   [Download Laragon](https://laragon.org/download/)
 
 ## 4. Installation and Set The Project Environment
 
