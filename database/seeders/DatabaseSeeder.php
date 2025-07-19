@@ -18,5 +18,9 @@ class DatabaseSeeder extends Seeder
         Student::factory(10)->create();
         Administrator::factory(10)->create();
         Quiz::factory(10)->create();
+
+        $this->call([
+            S3DefaultAssetsSeeder::class,
+        ]);
     }
 }

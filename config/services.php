@@ -51,7 +51,7 @@ return [
         'client_id' => env('DISCORD_CLIENT_ID'),
         'client_secret' => env('DISCORD_CLIENT_SECRET'),
         'redirect' => env('DISCORD_CALLBACK_URL'),
-        'allow_gif_avatars' => (bool)env('DISCORD_AVATAR_GIF'),
+        'allow_gif_avatars' => env('DISCORD_AVATAR_GIF'),
         'avatar_default_extension' => env('DISCORD_EXTENSION_DEFAULT'),
     ],
 ];
